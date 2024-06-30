@@ -5,7 +5,7 @@ import OtpVerification from "./pages/OtpVerification.jsx";
 import UserInfoForm from "./pages/UserInfoForm.jsx";
 import HomeAddressForm from "./pages/HomeAddressForm.jsx";
 import Success from "./pages/Success.jsx";
-import ButtonShowcase from "./pages/ButtonShowcase.jsx";
+import PlatapayStyleSheet from "./pages/PlatapayStyleSheet.jsx";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <Route path="/user-info-form" element={<UserInfoForm />} />
       <Route path="/home-address-form" element={<HomeAddressForm />} />
       <Route path="/success" element={<Success />} />
-      <Route path="/button-showcase" element={<ButtonShowcase />} />
+      <Route path="/platapay-style-sheet" element={<PlatapayStyleSheet />} />
       </Routes>
     </Router>
   );
