@@ -41,7 +41,7 @@ const UserProfile = () => {
             </div>
           </div>
         </div>
-        <Button className="bg-white text-blue-900 mt-4">View Benefits</Button>
+        <Button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-lg shadow-[rgba(0,0,0,0.5)] active:shadow-none active:translate-y-1 mt-4">View Benefits</Button>
       </div>
 
       {/* Account Options List */}
@@ -58,7 +58,7 @@ const UserProfile = () => {
           </div>
         ))}
         <div className="flex justify-between items-center py-2 mt-4 border-t border-gray-200">
-          <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 w-full">
+          <Button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-lg shadow-[rgba(0,0,0,0.5)] active:shadow-none active:translate-y-1 w-full mt-4">
             Log Out
           </Button>
         </div>
