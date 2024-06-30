@@ -11,6 +11,7 @@ import ImageUpload from "./pages/ImageUpload.jsx";
 import AccountVerification from "./pages/AccountVerification.jsx";
 import DocumentScanning from "./pages/DocumentScanning.jsx";
 import KycIdScanner from "./pages/KycIdScanner.jsx";
+import IdUpload from "./pages/IdUpload.jsx";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/account-verification" element={<AccountVerification />} />
         <Route path="/document-scanning" element={<DocumentScanning />} />
         <Route path="/kyc-id-scanner" element={<KycIdScanner />} />
+        <Route path="/id-upload" element={<IdUpload />} />
       </Routes>
     </Router>
   );
