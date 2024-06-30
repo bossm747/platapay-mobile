@@ -9,17 +9,32 @@ const ButtonShowcase = () => {
       <div className="flex flex-col space-y-4">
         <div className="flex flex-col items-center">
           <span className="text-white mb-2">Button with Border</span>
-          <Button className="border border-white text-white">Border Button</Button>
+          <Button className="border border-white text-white shadow-lg shadow-white">Border Button</Button>
         </div>
         
         <div className="flex flex-col items-center">
           <span className="text-white mb-2">Button with Dark Shadow</span>
-          <Button className="shadow-lg shadow-black text-white">Dark Shadow Button</Button>
+          <Button className="shadow-lg shadow-black text-white bg-blue-700">Dark Shadow Button</Button>
         </div>
         
         <div className="flex flex-col items-center">
           <span className="text-white mb-2">Button with Light Shadow</span>
-          <Button className="shadow-lg shadow-gray-500 text-white">Light Shadow Button</Button>
+          <Button className="shadow-lg shadow-gray-500 text-white bg-purple-700">Light Shadow Button</Button>
+        </div>
+        
+        <div className="flex flex-col items-center">
+          <span className="text-white mb-2">Button with Gradient Background</span>
+          <Button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white">Gradient Button</Button>
+        </div>
+        
+        <div className="flex flex-col items-center">
+          <span className="text-white mb-2">Button with Solid Background</span>
+          <Button className="bg-blue-500 text-white">Solid Blue Button</Button>
+        </div>
+        
+        <div className="flex flex-col items-center">
+          <span className="text-white mb-2">Button with Solid Background</span>
+          <Button className="bg-purple-500 text-white">Solid Purple Button</Button>
         </div>
       </div>
     </div>
