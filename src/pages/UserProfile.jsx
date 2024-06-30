@@ -1,21 +1,21 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Avatar } from "@/components/ui/avatar";
-import { Check } from "lucide-react";
+import { Check, User, Link, QrCode, Settings, Shield, FileText, Lock, HelpCircle, Gift, LogOut } from "lucide-react";
 
 const UserProfile = () => {
   const accountOptions = [
-    "Profile Limits",
-    "My Linked Accounts",
-    "My QR Codes",
-    "Settings",
-    "GScore",
-    "Terms and Conditions",
-    "Privacy Choices",
-    "Alipay+",
-    "Voucher Pocket",
-    "Promos",
-    "Help",
+    { title: "Profile Limits", icon: <User className="text-blue-900" /> },
+    { title: "My Linked Accounts", icon: <Link className="text-blue-900" /> },
+    { title: "My QR Codes", icon: <QrCode className="text-blue-900" /> },
+    { title: "Settings", icon: <Settings className="text-blue-900" /> },
+    { title: "GScore", icon: <Shield className="text-blue-900" /> },
+    { title: "Terms and Conditions", icon: <FileText className="text-blue-900" /> },
+    { title: "Privacy Choices", icon: <Lock className="text-blue-900" /> },
+    { title: "Alipay+", icon: <Gift className="text-blue-900" /> },
+    { title: "Voucher Pocket", icon: <Gift className="text-blue-900" /> },
+    { title: "Promos", icon: <Gift className="text-blue-900" /> },
+    { title: "Help", icon: <HelpCircle className="text-blue-900" /> },
   ];
 
   return (
@@ -50,15 +50,16 @@ const UserProfile = () => {
           <div key={index} className="flex justify-between items-center py-2 border-b border-gray-200">
             <div className="flex items-center">
               <div className="bg-blue-100 p-2 rounded">
-                <span>📄</span>
+                {option.icon}
               </div>
-              <span className="ml-4 text-blue-900">{option}</span>
+              <span className="ml-4 text-blue-900">{option.title}</span>
             </div>
             <span className="text-blue-300">➡️</span>
           </div>
         ))}
         <div className="flex justify-between items-center py-2 mt-4 border-t border-gray-200">
           <span className="text-blue-900">Log Out</span>
+          <LogOut className="text-blue-300" />
         </div>
       </div>
     </div>
