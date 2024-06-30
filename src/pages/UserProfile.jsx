@@ -19,9 +19,9 @@ const UserProfile = () => {
   ];
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 min-h-screen">
       {/* Header Bar */}
-      <div className="bg-blue-900 text-white p-4">
+      <div className="bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 text-white p-4">
         <div className="flex justify-between items-center">
           <span>4:49</span>
           <div className="flex items-center space-x-2">
@@ -52,13 +52,13 @@ const UserProfile = () => {
               <div className="bg-blue-100 p-2 rounded">
                 {option.icon}
               </div>
-              <span className="ml-4 text-blue-900">{option.title}</span>
+              <span className="ml-4 text-white">{option.title}</span>
             </div>
             <span className="text-blue-300">➡️</span>
           </div>
         ))}
         <div className="flex justify-between items-center py-2 mt-4 border-t border-gray-200">
-          <span className="text-blue-900">Log Out</span>
+          <span className="text-white">Log Out</span>
           <LogOut className="text-blue-300" />
         </div>
       </div>
