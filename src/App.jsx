@@ -6,6 +6,7 @@ import UserInfoForm from "./pages/UserInfoForm.jsx";
 import HomeAddressForm from "./pages/HomeAddressForm.jsx";
 import Success from "./pages/Success.jsx";
 import PlatapayStyleSheet from "./pages/PlatapayStyleSheet.jsx";
+import UserProfile from "./pages/UserProfile.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/home-address-form" element={<HomeAddressForm />} />
       <Route path="/success" element={<Success />} />
       <Route path="/platapay-style-sheet" element={<PlatapayStyleSheet />} />
+      <Route path="/user-profile" element={<UserProfile />} />
       </Routes>
     </Router>
   );
