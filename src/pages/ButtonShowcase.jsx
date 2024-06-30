@@ -35,12 +35,12 @@ const ButtonShowcase = () => {
         </div>
         
         <div className="flex flex-col items-center">
-          <span className="text-white mb-2">Button with Solid Background</span>
+          <span className="text-white mb-2">Solid Blue Button</span>
           <Button className="bg-blue-500 text-white">Solid Blue Button</Button>
         </div>
         
         <div className="flex flex-col items-center">
-          <span className="text-white mb-2">Button with Solid Background</span>
+          <span className="text-white mb-2">Solid Purple Button</span>
           <Button className="bg-purple-500 text-white">Solid Purple Button</Button>
         </div>
 
