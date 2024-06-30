@@ -9,9 +9,9 @@ const HomeAddressForm = () => {
   const [checked, setChecked] = useState(true);
 
   return (
-    <div className="h-screen w-screen flex flex-col items-center bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800">
+    <div className="h-screen w-screen flex flex-col items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
       {/* Status Bar */}
-      <div className="w-full flex justify-between items-center bg-black text-white p-2 fixed top-0 z-10">
+      <div className="w-full flex justify-between items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 text-white p-2 fixed top-0 z-10">
         <span className="ml-2">9:41</span>
         <div className="flex items-center space-x-2">
           <span>📶</span>
@@ -33,24 +33,24 @@ const HomeAddressForm = () => {
       {/* Form */}
       <div className="flex flex-col space-y-4 mt-4 w-4/5">
         <Label className="text-white">Street</Label>
-        <Input className="rounded bg-white text-black" defaultValue="123 Maligaya Street" />
+        <Input className="rounded bg-blue-100 text-blue-900" defaultValue="123 Maligaya Street" />
         
         <Label className="text-white">Province</Label>
         <div className="relative">
-          <Input className="rounded bg-white text-black" />
-          <ChevronDown className="absolute right-2 top-2 text-black" />
+          <Input className="rounded bg-blue-100 text-blue-900" />
+        <ChevronDown className="absolute right-2 top-2 text-blue-900" />
         </div>
         
         <Label className="text-white">City/Municipality</Label>
         <div className="relative">
-          <Input className="rounded bg-white text-black" />
-          <ChevronDown className="absolute right-2 top-2 text-black" />
+          <Input className="rounded bg-blue-100 text-blue-900" />
+        <ChevronDown className="absolute right-2 top-2 text-blue-900" />
         </div>
         
         <Label className="text-white">Barangay</Label>
         <div className="relative">
-          <Input className="rounded bg-white text-black" />
-          <ChevronDown className="absolute right-2 top-2 text-black" />
+          <Input className="rounded bg-blue-100 text-blue-900" />
+        <ChevronDown className="absolute right-2 top-2 text-blue-900" />
         </div>
         
         <div className="flex items-center space-x-2 mt-4">
@@ -60,7 +60,7 @@ const HomeAddressForm = () => {
           </span>
         </div>
         
-        <Button className="bg-orange-500 text-white rounded mt-4">Next</Button>
+        <Button className="bg-blue-800 text-white rounded mt-4">Next</Button>
       </div>
     </div>
   );
