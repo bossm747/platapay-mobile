@@ -8,6 +8,7 @@ import Success from "./pages/Success.jsx";
 import PlatapayStyleSheet from "./pages/PlatapayStyleSheet.jsx";
 import UserProfile from "./pages/UserProfile.jsx";
 import ImageUpload from "./pages/ImageUpload.jsx";
+import AccountVerification from "./pages/AccountVerification.jsx";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path="/platapay-style-sheet" element={<PlatapayStyleSheet />} />
       <Route path="/user-profile" element={<UserProfile />} />
       <Route path="/image-upload" element={<ImageUpload />} />
+      <Route path="/account-verification" element={<AccountVerification />} />
       </Routes>
     </Router>
   );
