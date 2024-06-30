@@ -7,6 +7,7 @@ import HomeAddressForm from "./pages/HomeAddressForm.jsx";
 import Success from "./pages/Success.jsx";
 import PlatapayStyleSheet from "./pages/PlatapayStyleSheet.jsx";
 import UserProfile from "./pages/UserProfile.jsx";
+import ImageUpload from "./pages/ImageUpload.jsx";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/success" element={<Success />} />
       <Route path="/platapay-style-sheet" element={<PlatapayStyleSheet />} />
       <Route path="/user-profile" element={<UserProfile />} />
+      <Route path="/image-upload" element={<ImageUpload />} />
       </Routes>
     </Router>
   );
