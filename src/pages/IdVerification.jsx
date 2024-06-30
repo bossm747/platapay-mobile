@@ -7,7 +7,7 @@ const IdVerification = () => {
   const [isPoliticallyExposed, setIsPoliticallyExposed] = useState(false);
 
   return (
-    <div className="h-screen w-screen flex flex-col items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
+    <div className="h-screen w-screen flex flex-col items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 text-white">
       {/* Status Bar */}
       <div className="w-full flex justify-between items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 text-white p-2 fixed top-0 z-10">
         <div className="flex items-center">
@@ -23,11 +23,11 @@ const IdVerification = () => {
       {/* Title */}
       <h1 className="text-blue-300 font-bold mt-16">ID Verification</h1>
       {/* Primary Instruction */}
-      <p className="text-black mt-4 text-center px-4">
+      <p className="text-white mt-4 text-center px-4">
         Take a photo of your valid ID and specimen signature
       </p>
       {/* Subheader */}
-      <p className="text-gray-400 mt-2 text-center px-4">
+      <p className="text-gray-300 mt-2 text-center px-4">
         Kindly provide required means of identification to keep your e-wallet safe.
       </p>
       {/* Buttons */}
@@ -42,7 +42,7 @@ const IdVerification = () => {
         </Button>
       </div>
       {/* Bulleted List */}
-      <ul className="text-black mt-8 px-4 list-disc">
+      <ul className="text-white mt-8 px-4 list-disc">
         <li>Ensure the ID is clear and readable.</li>
         <li>Make sure the signature is visible.</li>
         <li>Use a well-lit area for better quality.</li>
@@ -50,10 +50,10 @@ const IdVerification = () => {
       {/* Checkbox */}
       <div className="flex items-center space-x-2 mt-4">
         <Checkbox checked={isPoliticallyExposed} onCheckedChange={setIsPoliticallyExposed} className="text-gray-700" />
-        <span className="text-gray-700">I am considered a Politically Exposed Person</span>
+        <span className="text-white">I am considered a Politically Exposed Person</span>
       </div>
       {/* Next Button */}
-      <Button className="bg-blue-700 text-white mt-8 w-4/5">Next</Button>
+      <Button className="bg-gradient-to-r from-green-400 to-blue-500 text-white mt-8 w-4/5">Next</Button>
     </div>
   );
 };
