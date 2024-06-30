@@ -38,7 +38,7 @@ const Success = () => {
         {/* Instructional Text */}
         <p className="text-gray-400 mt-4">Press continue to Login</p>
         {/* Continue Button */}
-        <Button className="w-full bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 text-white rounded mt-4">Continue</Button>
+        <Button className="w-full bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-full shadow-lg shadow-[rgba(0,0,0,0.5)] active:shadow-none active:translate-y-1 mt-4">Continue</Button>
       </div>
     </div>
   );

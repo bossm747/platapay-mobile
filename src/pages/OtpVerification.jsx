@@ -59,7 +59,7 @@ const OtpVerification = () => {
       </div>
       {/* Resend Message */}
       <p className="text-gray-400 text-center mt-4">
-        Didn’t receive OTP code? <Button className="text-orange-500">Resend new?</Button>
+        Didn’t receive OTP code? <Button className="bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-full shadow-lg shadow-[rgba(0,0,0,0.5)] active:shadow-none active:translate-y-1 mt-4">Resend new?</Button>
       </p>
     </div>
   );
