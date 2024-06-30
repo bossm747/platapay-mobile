@@ -58,8 +58,9 @@ const UserProfile = () => {
           </div>
         ))}
         <div className="flex justify-between items-center py-2 mt-4 border-t border-gray-200">
-          <span className="text-white">Log Out</span>
-          <LogOut className="text-blue-300" />
+          <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 w-full">
+            Log Out
+          </Button>
         </div>
       </div>
     </div>
