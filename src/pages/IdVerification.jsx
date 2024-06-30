@@ -32,12 +32,12 @@ const IdVerification = () => {
       </p>
       {/* Buttons */}
       <div className="flex space-x-4 mt-8">
-        <Button className="flex items-center space-x-2 bg-gray-200 text-gray-700">
-          <CreditCard className="text-gray-700" />
+        <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 flex items-center space-x-2">
+          <CreditCard className="text-white" />
           <span>Take ID photo</span>
         </Button>
-        <Button className="flex items-center space-x-2 bg-gray-200 text-gray-700">
-          <Camera className="text-gray-700" />
+        <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 flex items-center space-x-2">
+          <Camera className="text-white" />
           <span>Take specimen signature</span>
         </Button>
       </div>
@@ -53,7 +53,7 @@ const IdVerification = () => {
         <span className="text-white">I am considered a Politically Exposed Person</span>
       </div>
       {/* Next Button */}
-      <Button className="bg-gradient-to-r from-green-400 to-blue-500 text-white mt-8 w-4/5">Next</Button>
+      <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 mt-8 w-4/5">Next</Button>
     </div>
   );
 };

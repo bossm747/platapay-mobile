@@ -23,7 +23,7 @@ const DocumentScanning = () => {
       </div>
       {/* Crop Button */}
       <div className="absolute top-16 right-4">
-        <Button className="bg-gray-500 text-white rounded-lg">Crop</Button>
+        <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1">Crop</Button>
       </div>
       {/* Document View */}
       <div className="flex-1 flex justify-center items-center mt-4">
@@ -41,7 +41,7 @@ const DocumentScanning = () => {
       </div>
       {/* Capture Button */}
       <div className="absolute bottom-8">
-        <Button className="bg-white rounded-full w-16 h-16"></Button>
+        <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 rounded-full w-16 h-16 active:shadow-none active:translate-y-1"></Button>
       </div>
     </div>
   );
