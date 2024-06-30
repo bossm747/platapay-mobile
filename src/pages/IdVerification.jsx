@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-import { ArrowLeft, Battery, Signal, Wifi, Camera, IdCard } from "lucide-react";
+import { ArrowLeft, Battery, Signal, Wifi, Camera, CreditCard } from "lucide-react";
 
 const IdVerification = () => {
   const [isPoliticallyExposed, setIsPoliticallyExposed] = useState(false);
@@ -33,7 +33,7 @@ const IdVerification = () => {
       {/* Buttons */}
       <div className="flex space-x-4 mt-8">
         <Button className="flex items-center space-x-2 bg-gray-200 text-gray-700">
-          <IdCard className="text-gray-700" />
+          <CreditCard className="text-gray-700" />
           <span>Take ID photo</span>
         </Button>
         <Button className="flex items-center space-x-2 bg-gray-200 text-gray-700">
