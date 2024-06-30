@@ -7,10 +7,13 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const PlatapayStyleSheet = () => {
   return (
     <div className="h-screen w-screen flex flex-col items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 p-8">
+      <Header />
       <h1 className="text-white text-2xl font-bold mb-8">Platapay Theme Showcase</h1>
       
       <div className="flex flex-col space-y-4">
@@ -91,6 +94,7 @@ const PlatapayStyleSheet = () => {
           <Switch />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
