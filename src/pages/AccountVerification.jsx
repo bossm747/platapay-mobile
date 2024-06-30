@@ -1,4 +1,5 @@
 import React from "react";
+import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const AccountVerification = () => {
@@ -20,47 +21,25 @@ const AccountVerification = () => {
         </div>
       </div>
       {/* Title */}
-      <h1 className="text-gray-700 font-thin mt-4">Verify your account</h1>
+      <h1 className="text-white font-thin mt-4">Verify your account</h1>
       {/* Main Text */}
-      <p className="text-gray-700 font-bold mt-4 text-center">
+      <p className="text-white font-bold mt-4 text-center">
         Enjoy higher account limits by upgrading your account through simple verification.
       </p>
       {/* Checklist Graphic */}
       <div className="mt-4">
-        <svg
-          width="100"
-          height="100"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="24" height="24" rx="12" fill="#FFFFFF" stroke="#D1D5DB" />
-          <path
-            d="M8 10h8M8 14h5"
-            stroke="#D1D5DB"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M10 12l1 1 3-3"
-            stroke="#3B82F6"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <CheckCircle className="text-white" size={100} />
       </div>
       {/* Instructions Title */}
-      <h2 className="text-gray-700 font-thin mt-4">Below are the things to do to verify your account.</h2>
+      <h2 className="text-white font-thin mt-4">Below are the things to do to verify your account.</h2>
       {/* Steps */}
-      <div className="mt-4 text-gray-700">
+      <div className="mt-4 text-white">
         <p><strong>Step 1:</strong> Complete your personal information</p>
         <p className="mt-2"><strong>Step 2:</strong> Have your valid ID ready</p>
         <p className="mt-2"><strong>Step 3:</strong> Confirm identity via face verification</p>
       </div>
       {/* Start Button */}
-      <Button className="bg-blue-900 text-white rounded-full mt-8">Start</Button>
+      <Button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg mt-8 px-8 py-2 shadow-lg shadow-[rgba(0,0,0,0.5)] active:shadow-none active:translate-y-1">Start</Button>
     </div>
   );
 };
