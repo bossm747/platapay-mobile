@@ -95,7 +95,7 @@ const AccountVerification = () => {
         </Select>
         
         {/* Next Button */}
-        <Button className="shadow-lg shadow-[rgba(0,0,0,0.7)] text-white bg-[#2F4B9F] active:shadow-none active:translate-y-1 mt-8 w-full rounded-lg">Next</Button>
+        <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 mt-8 w-full">Next</Button>
       </div>
       {/* Home Indicator */}
       <div className="w-16 h-1 bg-white rounded-full mt-4"></div>

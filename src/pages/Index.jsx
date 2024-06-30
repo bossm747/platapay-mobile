@@ -60,11 +60,11 @@ const Index = () => {
           <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
         </div>
         {/* Verify Button */}
-        <Button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-lg shadow-[rgba(0,0,0,0.5)] active:shadow-none active:translate-y-1 mt-4 px-8 py-2">Verify</Button>
+        <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 mt-4 px-8 py-2">Verify</Button>
         {/* Keypad */}
         <div className="grid grid-cols-3 gap-2 mt-4 w-full px-4">
           {["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"].map((key) => (
-            <Button key={key} className="bg-blue-100 text-black border border-gray-300 w-full h-16">
+            <Button key={key} className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 w-full h-16">
             {key}
           </Button>
           ))}

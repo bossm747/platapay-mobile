@@ -68,7 +68,7 @@ const UserInfoForm = () => {
         <Label className="text-blue-300">Referral Code</Label>
         <Input className="rounded bg-blue-100 text-blue-900" defaultValue="INS1234" />
         
-        <Button className="bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-full shadow-lg shadow-[rgba(0,0,0,0.5)] active:shadow-none active:translate-y-1 mt-4">Next</Button>
+        <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 mt-4 w-full">Next</Button>
       </div>
     </div>
   );

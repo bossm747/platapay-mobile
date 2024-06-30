@@ -28,7 +28,7 @@ const ImageUpload = () => {
       <div className="flex flex-col space-y-4 mt-4 w-4/5">
         <Label className="text-white">Select Image to Upload</Label>
         <Input type="file" className="rounded bg-blue-100 text-blue-900" />
-        <Button className="bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-full shadow-lg shadow-[rgba(0,0,0,0.5)] active:shadow-none active:translate-y-1 mt-4">Upload</Button>
+        <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 mt-4 w-full">Upload</Button>
       </div>
       <h2 className="text-white text-xl font-bold mt-8">Templates Gallery</h2>
       <div className="grid grid-cols-2 gap-4 mt-4 w-4/5">

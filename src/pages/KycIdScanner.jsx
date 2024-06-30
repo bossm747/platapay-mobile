@@ -40,7 +40,7 @@ const KycIdScanner = () => {
         height={240}
         className="mt-4"
       />
-      <Button onClick={capture} className="bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-full shadow-lg shadow-[rgba(0,0,0,0.5)] active:shadow-none active:translate-y-1 mt-4">Capture ID</Button>
+      <Button onClick={capture} className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 mt-4">Capture ID</Button>
       {imageSrc && (
         <div className="mt-4">
           <h2 className="text-white text-xl">Captured Image</h2>

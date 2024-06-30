@@ -30,7 +30,7 @@ const IdUpload = () => {
       </div>
       <div className="flex flex-col space-y-4 mt-4 w-4/5">
         <Input type="file" accept="image/*" onChange={handleUpload} className="rounded bg-blue-100 text-blue-900" />
-        <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 w-full">Upload</Button>
+        <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 w-full dark:shadow-[rgba(0,0,0,0.9)]">Upload</Button>
       
       </div>
     </div>
