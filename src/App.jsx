@@ -9,6 +9,7 @@ import PlatapayStyleSheet from "./pages/PlatapayStyleSheet.jsx";
 import UserProfile from "./pages/UserProfile.jsx";
 import ImageUpload from "./pages/ImageUpload.jsx";
 import AccountVerification from "./pages/AccountVerification.jsx";
+import DocumentScanning from "./pages/DocumentScanning.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/user-profile" element={<UserProfile />} />
         <Route path="/image-upload" element={<ImageUpload />} />
         <Route path="/account-verification" element={<AccountVerification />} />
+        <Route path="/document-scanning" element={<DocumentScanning />} />
       </Routes>
     </Router>
   );
