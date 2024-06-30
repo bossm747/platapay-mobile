@@ -65,8 +65,8 @@ const Index = () => {
         <div className="grid grid-cols-3 gap-2 mt-4 w-full px-4">
           {["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"].map((key) => (
             <Button key={key} className="bg-blue-100 text-black border border-gray-300 w-full h-16">
-              {key}
-            </Button>
+            {key}
+          </Button>
           ))}
         </div>
       </div>
