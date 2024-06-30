@@ -9,12 +9,12 @@ const ButtonShowcase = () => {
       <div className="flex flex-col space-y-4">
         <div className="flex flex-col items-center">
           <span className="text-white mb-2">Button with Border</span>
-          <Button className="border border-white text-white shadow-lg shadow-white">Border Button</Button>
+          <Button className="border border-white text-white shadow-lg shadow-[rgba(255,255,255,0.5)] active:shadow-none active:translate-y-1">Border Button</Button>
         </div>
         
         <div className="flex flex-col items-center">
           <span className="text-white mb-2">Button with Dark Shadow</span>
-          <Button className="shadow-lg shadow-black text-white bg-blue-700">Dark Shadow Button</Button>
+          <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1">Dark Shadow Button</Button>
         </div>
         
         <div className="flex flex-col items-center">
