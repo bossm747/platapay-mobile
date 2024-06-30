@@ -60,7 +60,7 @@ const Index = () => {
           <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
         </div>
         {/* Verify Button */}
-        <Button className="bg-blue-800 text-white rounded-full mt-4 px-8 py-2">Verify</Button>
+        <Button className="bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 text-white rounded-full mt-4 px-8 py-2">Verify</Button>
         {/* Keypad */}
         <div className="grid grid-cols-3 gap-2 mt-4 w-full px-4">
           {["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"].map((key) => (
