@@ -10,9 +10,9 @@ const AccountVerification = () => {
   const [checked, setChecked] = useState(false);
 
   return (
-    <div className="h-screen w-screen flex flex-col items-center bg-gradient-to-r from-gray-700 via-gray-500 to-gray-900">
+    <div className="h-screen w-screen flex flex-col items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
       {/* Status Bar */}
-      <div className="w-full flex justify-between items-center bg-gray-800 text-white p-2 fixed top-0 z-10">
+      <div className="w-full flex justify-between items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 text-white p-2 fixed top-0 z-10">
         <span className="ml-2">9:41</span>
         <div className="flex items-center space-x-2">
           <span>📶</span>
@@ -95,7 +95,7 @@ const AccountVerification = () => {
         </Select>
         
         {/* Next Button */}
-        <Button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-lg shadow-[rgba(0,0,0,0.5)] active:shadow-none active:translate-y-1 mt-8 w-full">Next</Button>
+        <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 mt-8 w-full">Next</Button>
       </div>
       {/* Home Indicator */}
       <div className="w-16 h-1 bg-white rounded-full mt-4"></div>
