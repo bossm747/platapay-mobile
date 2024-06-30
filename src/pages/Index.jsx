@@ -5,9 +5,9 @@ import { Label } from "@/components/ui/label";
 
 const Index = () => {
   return (
-    <div className="h-screen w-screen flex flex-col items-center justify-center bg-white">
+    <div className="h-screen w-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
       {/* Sticky Header */}
-      <div className="w-full flex justify-between items-center bg-blue-500 text-white p-2 fixed top-0 z-10">
+      <div className="w-full flex justify-between items-center bg-blue-800 text-white p-2 fixed top-0 z-10">
         <span className="ml-2">9:41</span>
         <div className="flex items-center space-x-2">
           <span>&#x2190;</span>
@@ -16,11 +16,11 @@ const Index = () => {
         </div>
       </div>
       {/* Screen Divider */}
-      <div className="w-full h-1 bg-blue-300 mt-8"></div>
+      <div className="w-full h-1 bg-blue-600 mt-8"></div>
       {/* Body Content */}
       <div className="flex-1 flex flex-col items-center justify-center mt-8">
         {/* Title */}
-        <h1 className="text-black text-center mt-4">(MPIN)</h1>
+        <h1 className="text-white text-center mt-4">(MPIN)</h1>
         {/* Illustration */}
         <div className="mt-4">
           <svg
@@ -38,40 +38,40 @@ const Index = () => {
           </svg>
         </div>
         {/* Prompt */}
-        <p className="text-blue-700 text-center mt-4">
+        <p className="text-blue-200 text-center mt-4">
           Nominate a 4-digit Mobile Personal Identification Number (MPIN).
         </p>
         {/* Instruction 1 */}
-        <Label className="text-blue-500 mt-4">Enter 4 Digit MPIN code</Label>
+        <Label className="text-blue-300 mt-4">Enter 4 Digit MPIN code</Label>
         {/* Entry Field Set 1 */}
         <div className="flex space-x-2 mt-2">
-          <Input className="w-12 h-12 text-center border-2 border-blue-500" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-500" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-500" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-500" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
         </div>
         {/* Instruction 2 */}
-        <Label className="text-blue-500 mt-4">Confirm 4 Digit MPIN code</Label>
+        <Label className="text-blue-300 mt-4">Confirm 4 Digit MPIN code</Label>
         {/* Entry Field Set 2 */}
         <div className="flex space-x-2 mt-2">
-          <Input className="w-12 h-12 text-center border-2 border-blue-500" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-500" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-500" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-500" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
         </div>
         {/* Verify Button */}
-        <Button className="bg-blue-500 text-white rounded-full mt-4 px-8 py-2">Verify</Button>
+        <Button className="bg-blue-800 text-white rounded-full mt-4 px-8 py-2">Verify</Button>
         {/* Keypad */}
         <div className="grid grid-cols-3 gap-2 mt-4">
           {["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"].map((key) => (
-            <Button key={key} className="bg-blue-100 text-black border border-gray-300">
+            <Button key={key} className="bg-blue-100 text-black border border-gray-300 w-16 h-16">
               {key}
             </Button>
           ))}
         </div>
       </div>
       {/* Sticky Footer */}
-      <div className="w-full flex justify-center items-center bg-blue-500 text-white p-2 fixed bottom-0 z-10">
+      <div className="w-full flex justify-center items-center bg-blue-800 text-white p-2 fixed bottom-0 z-10">
         <span className="text-center">Footer Content</span>
       </div>
     </div>
