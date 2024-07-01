@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Outlet, useLocation, Link } from "react-router-dom";
 import { Bell, Menu, Home, ArrowLeftRight, QrCode, Inbox, HelpCircle } from "lucide-react";
 
-const logoUrl = "https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub-2-1.png?w=1024"; // Provided logo URL
+const logoUrl = "https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub-500-x-500-px.png?w=500"; // Updated logo URL
 
 const pages = [
   { path: "/", name: "Home" },
