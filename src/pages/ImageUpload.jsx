@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 const images = [
   "https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub-2-1.png?w=1024",
@@ -23,7 +21,6 @@ const images = [
 const ImageUpload = () => {
   return (
     <div className="h-screen w-screen flex flex-col items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
-      <Header />
       <h1 className="text-white text-2xl font-bold mt-8">Upload Image</h1>
       <div className="flex flex-col space-y-4 mt-4 w-4/5">
         <Label className="text-white">Select Image to Upload</Label>
@@ -43,7 +40,6 @@ const ImageUpload = () => {
           </Card>
         ))}
       </div>
-      <Footer />
     </div>
   );
 };
