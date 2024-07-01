@@ -1,5 +1,5 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Layout from "./components/Layout.jsx";
+import Layout from "./components/Layout.jsx"; // Make sure the path is correct
 import Index from "./pages/Index.jsx";
 import Mpin from "./pages/Mpin.jsx";
 import OtpVerification from "./pages/OtpVerification.jsx";
@@ -15,13 +15,12 @@ import KycIdScanner from "./pages/KycIdScanner.jsx";
 import IdUpload from "./pages/IdUpload.jsx";
 import IdVerification from "./pages/IdVerification.jsx";
 import Balance from "./pages/Balance.jsx";
-import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
     <Router>
-      <Layout>
-        <Routes>
+      <Routes>
+        <Route element={<Layout />}>
           <Route exact path="/" element={<Index />} />
           <Route path="/otp-verification" element={<OtpVerification />} />
           <Route path="/mpin" element={<Mpin />} />
@@ -37,9 +36,8 @@ function App() {
           <Route path="/id-upload" element={<IdUpload />} />
           <Route path="/id-verification" element={<IdVerification />} />
           <Route path="/balance" element={<Balance />} />
-        </Routes>
-      </Layout>
-      <Footer />
+        </Route>
+      </Routes>
     </Router>
   );
 }
