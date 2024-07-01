@@ -45,7 +45,6 @@ const Layout = () => {
         </div>
         <div className="flex flex-col items-center">
           <img src={logoUrl} alt="Platapay Logo" className="h-10 w-auto mb-2" />
-          <span className="text-2xl font-bold">Platapay</span>
           <span className="text-xl font-bold">{currentPage ? currentPage.name : "Home"}</span>
         </div>
         <Bell className="text-white" />
