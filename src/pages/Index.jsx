@@ -1,13 +1,12 @@
 import React from "react";
-import { Phone, ArrowRight, Building, FileText, Hand, PiggyBank, UserPlus, Sprout, ShoppingCart, Gift, Leaf, CreditCard } from "lucide-react";
-import flyingPesoIcon from "../../public/icons/flying-peso.png";
+import { Phone, ArrowRight, Building, FileText, Hand, PiggyBank, UserPlus, Sprout, ShoppingCart, Gift, Leaf, CreditCard, ArrowLeftRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 const Index = () => {
   const services = [
-    { title: "Plata PayMe", icon: <img src={flyingPesoIcon} alt="Flying Peso" className="text-white" /> },
+    { title: "Plata PayMe", icon: <ArrowLeftRight className="text-white" /> },
     { title: "Load", icon: <ArrowRight className="text-white" /> },
     { title: "Transfer", icon: <Building className="text-white" /> },
     { title: "Bills", icon: <FileText className="text-white" /> },
