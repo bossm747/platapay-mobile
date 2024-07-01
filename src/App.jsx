@@ -13,6 +13,7 @@ import DocumentScanning from "./pages/DocumentScanning.jsx";
 import KycIdScanner from "./pages/KycIdScanner.jsx";
 import IdUpload from "./pages/IdUpload.jsx";
 import IdVerification from "./pages/IdVerification.jsx";
+import Balance from "./pages/Balance.jsx";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/kyc-id-scanner" element={<KycIdScanner />} />
         <Route path="/id-upload" element={<IdUpload />} />
         <Route path="/id-verification" element={<IdVerification />} />
+        <Route path="/balance" element={<Balance />} />
       </Routes>
     </Router>
   );
