@@ -37,6 +37,11 @@ const Index = () => {
           <Button className="bg-green-500 text-white shadow-lg shadow-[rgba(0,0,0,0.5)]">Wallet Topup</Button>
           <Button className="bg-purple-900 text-white border border-white border-[0.5px] rounded shadow-lg shadow-[rgba(0,0,0,0.9)]">Wallet Cashout</Button>
         </div>
+        {/* Transaction Container */}
+        <div className="bg-white rounded-lg p-4 mt-4 w-11/12">
+          <h2 className="text-blue-900 text-lg">Transactions</h2>
+          <p className="text-blue-900 mt-2">No transactions available</p>
+        </div>
         {/* Spacer */}
         <div className="h-8"></div>
         {/* Keypad */}
