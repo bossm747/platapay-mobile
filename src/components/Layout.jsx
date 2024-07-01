@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Outlet, useLocation, Link } from "react-router-dom";
 import { Bell, Menu, Home, Inbox, QrCode, HelpCircle, CreditCard, LogIn, Settings, ArrowLeft, ArrowRight } from "lucide-react";
 import pages from "../pagesConfig";
@@ -10,6 +10,25 @@ const Layout = () => {
   const [collapsed, setCollapsed] = useState(false);
   const location = useLocation();
   const currentPage = pages.find(page => page.path === location.pathname);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+
+    if (menuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuOpen]);
 
   return (
     <div className="h-screen w-screen flex flex-col bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
@@ -27,25 +46,25 @@ const Layout = () => {
       </div>
       {/* Sliding Menu */}
       {menuOpen && (
-        <div className={`fixed top-0 left-0 h-full bg-purple-900 text-white shadow-2xl z-20 ${collapsed ? 'w-16' : 'w-1/2'} transition-width duration-300`}>
+        <div ref={menuRef} className={`fixed top-0 left-0 h-full bg-purple-900 text-white shadow-2xl z-20 ${collapsed ? 'w-16' : 'w-1/2'} transition-width duration-300`}>
           <div className="p-4 flex flex-col justify-between h-full">
-            <div>
+            <div className="flex-1 overflow-y-auto">
               <button onClick={() => setCollapsed(!collapsed)} className="text-white w-full text-left mb-4">
                 {collapsed ? <ArrowRight className="w-8 h-8" /> : <ArrowLeft className="w-8 h-8" />}
               </button>
               {pages.map(page => (
-                <Link key={page.path} to={page.path} className="flex items-center px-2 py-3 hover:bg-purple-700" onClick={() => setMenuOpen(false)}>
+                <Link key={page.path} to={page.path} className="flex items-center px-2 py-3 hover:bg-purple-700 text-sm" onClick={() => setMenuOpen(false)}>
                   {React.createElement(page.icon, { className: "text-white w-8 h-8" })}
                   {!collapsed && <span className="ml-4">{page.name}</span>}
                 </Link>
               ))}
             </div>
-            <div>
-              <Link to="/login" className="flex items-center px-2 py-3 hover:bg-purple-700" onClick={() => setMenuOpen(false)}>
+            <div className="mt-4">
+              <Link to="/login" className="flex items-center px-2 py-3 hover:bg-purple-700 text-sm" onClick={() => setMenuOpen(false)}>
                 <LogIn className="text-white w-8 h-8" />
                 {!collapsed && <span className="ml-4">Log In/Out</span>}
               </Link>
-              <Link to="/settings" className="flex items-center px-2 py-3 hover:bg-purple-700" onClick={() => setMenuOpen(false)}>
+              <Link to="/settings" className="flex items-center px-2 py-3 hover:bg-purple-700 text-sm" onClick={() => setMenuOpen(false)}>
                 <Settings className="text-white w-8 h-8" />
                 {!collapsed && <span className="ml-4">Settings</span>}
               </Link>
@@ -54,7 +73,7 @@ const Layout = () => {
         </div>
       )}
       {/* Body Content */}
-      <div className="flex-1 mt-16">
+      <div className="flex-1 mt-16 mb-16 p-4">
         <Outlet />
       </div>
       {/* Sticky Footer */}
