@@ -21,16 +21,7 @@ const Balance = () => {
 
   return (
     <div className="h-screen w-screen flex flex-col items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
-      {/* Status Bar */}
-      <div className="w-full flex justify-between items-center bg-blue-900 text-white p-2 fixed top-0 z-10">
-        <span className="ml-2">9:41</span>
-        <div className="flex items-center space-x-2">
-          <span>📶</span>
-          <span>📶</span>
-          <span>🔋</span>
-        </div>
-        <Bell className="text-white" />
-      </div>
+      
       {/* Platapay Logo */}
       <div className="flex items-center mt-16">
         <Avatar className="bg-gradient-to-r from-gray-400 to-gray-200 text-blue-900">P</Avatar>
