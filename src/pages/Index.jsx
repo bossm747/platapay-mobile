@@ -8,7 +8,7 @@ const Index = () => {
   const services = [
     { title: "Plata PayMe", icon: <ArrowLeftRight className="text-white" /> },
     { title: "Plata PaLoad", icon: <Smartphone className="text-white" /> },
-    { title: "Plata PaLoan", icon: <DollarSign className="text-white" /> },
+    { title: "Plata PaLoan", icon: <span className="text-white">PHP</span> },
     { title: "Plata Invest", icon: <TrendingUp className="text-white" /> },
     { title: "Plata Goals", icon: <Target className="text-white" /> },
     { title: "Plata Protect", icon: <Shield className="text-white" /> },
