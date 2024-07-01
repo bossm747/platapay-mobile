@@ -1,5 +1,5 @@
 import React from "react";
-import { Phone, ArrowRight, Building, FileText, Hand, PiggyBank, UserPlus, Sprout, ShoppingCart, Gift, Leaf, CreditCard, ArrowLeftRight, Mobile, DollarSign, TrendingUp, Target, Shield, Star, PieChart, ShoppingBag, Send, Bitcoin, HelpCircle } from "lucide-react";
+import { Phone, ArrowRight, Building, FileText, Hand, PiggyBank, UserPlus, Sprout, ShoppingCart, Gift, Leaf, CreditCard, ArrowLeftRight, Smartphone, DollarSign, TrendingUp, Target, Shield, Star, PieChart, ShoppingBag, Send, Bitcoin, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 const Index = () => {
   const services = [
     { title: "Plata PayMe", icon: <ArrowLeftRight className="text-white" /> },
-    { title: "Plata PaLoad", icon: <Mobile className="text-white" /> },
+    { title: "Plata PaLoad", icon: <Smartphone className="text-white" /> },
     { title: "Plata PaLoan", icon: <DollarSign className="text-white" /> },
     { title: "Plata Invest", icon: <TrendingUp className="text-white" /> },
     { title: "Plata Goals", icon: <Target className="text-white" /> },
