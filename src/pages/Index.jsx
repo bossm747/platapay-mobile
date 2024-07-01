@@ -6,18 +6,18 @@ import { Label } from "@/components/ui/label";
 
 const Index = () => {
   const services = [
-    { title: "Send", icon: <Phone className="text-blue-900" /> },
-    { title: "Load", icon: <ArrowRight className="text-blue-900" /> },
-    { title: "Transfer", icon: <Building className="text-blue-900" /> },
-    { title: "Bills", icon: <FileText className="text-blue-900" /> },
-    { title: "Borrow", icon: <Hand className="text-blue-900" /> },
-    { title: "GSave", icon: <PiggyBank className="text-blue-900" /> },
-    { title: "GInsure", icon: <UserPlus className="text-blue-900" /> },
-    { title: "GInvest", icon: <Sprout className="text-blue-900" /> },
-    { title: "GLife", icon: <ShoppingCart className="text-blue-900" /> },
-    { title: "A+ Rewards", icon: <Gift className="text-blue-900" /> },
-    { title: "GForest", icon: <Leaf className="text-blue-900" /> },
-    { title: "Cards", icon: <CreditCard className="text-blue-900" /> },
+    { title: "Send", icon: <Phone className="text-white" /> },
+    { title: "Load", icon: <ArrowRight className="text-white" /> },
+    { title: "Transfer", icon: <Building className="text-white" /> },
+    { title: "Bills", icon: <FileText className="text-white" /> },
+    { title: "Borrow", icon: <Hand className="text-white" /> },
+    { title: "GSave", icon: <PiggyBank className="text-white" /> },
+    { title: "GInsure", icon: <UserPlus className="text-white" /> },
+    { title: "GInvest", icon: <Sprout className="text-white" /> },
+    { title: "GLife", icon: <ShoppingCart className="text-white" /> },
+    { title: "A+ Rewards", icon: <Gift className="text-white" /> },
+    { title: "GForest", icon: <Leaf className="text-white" /> },
+    { title: "Cards", icon: <CreditCard className="text-white" /> },
   ];
 
   return (
@@ -54,26 +54,26 @@ const Index = () => {
           </svg>
         </div>
         {/* Prompt */}
-        <p className="text-blue-200 text-center mt-4">
+        <p className="text-white text-center mt-4">
           Nominate a 4-digit Mobile Personal Identification Number (MPIN).
         </p>
         {/* Instruction 1 */}
-        <Label className="text-blue-300 mt-4">Enter 4 Digit MPIN code</Label>
+        <Label className="text-white mt-4">Enter 4 Digit MPIN code</Label>
         {/* Entry Field Set 1 */}
         <div className="flex space-x-2 mt-2">
-          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-white" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-white" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-white" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-white" maxLength={1} />
         </div>
         {/* Instruction 2 */}
-        <Label className="text-blue-300 mt-4">Confirm 4 Digit MPIN code</Label>
+        <Label className="text-white mt-4">Confirm 4 Digit MPIN code</Label>
         {/* Entry Field Set 2 */}
         <div className="flex space-x-2 mt-2">
-          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-white" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-white" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-white" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-white" maxLength={1} />
         </div>
         {/* Verify Button */}
         <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 mt-4 px-8 py-2">Verify</Button>
@@ -82,7 +82,7 @@ const Index = () => {
           {services.map((service, index) => (
             <Button key={index} className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 w-full h-16 flex flex-col items-center justify-center">
               {service.icon}
-              <span className="text-xs">{service.title}</span>
+              <span className="text-xs text-white">{service.title}</span>
             </Button>
           ))}
         </div>
