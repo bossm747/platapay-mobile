@@ -1,5 +1,5 @@
 import React from "react";
-import template1 from "@/public/images/template1.png";
+import platapayLogo from "@/public/images/platapay-logo.png";
 import { Bell, Menu } from "lucide-react";
 
 const Header = () => {
@@ -8,7 +8,7 @@ const Header = () => {
       <Menu className="text-white" />
       <div className="flex flex-col items-center">
         {/* Top row: Platapay logo */}
-        <img src={template1} alt="Platapay Logo" className="h-8" />
+        <img src={platapayLogo} alt="Platapay Logo" className="h-8" />
         {/* Bottom row: Page title */}
         <span className="text-xl font-bold">Home</span>
       </div>
