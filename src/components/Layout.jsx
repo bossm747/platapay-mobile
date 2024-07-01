@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Outlet, useLocation, Link } from "react-router-dom";
-import { Bell, Menu, Home, Inbox, QrCode, HelpCircle, CreditCard, LogIn, Settings, ArrowLeft, ArrowRight, User, MapPin, CheckCircle, Layers, Upload, CheckSquare, IdCard, DollarSign } from "lucide-react";
+import { Bell, Menu, Home, Inbox, QrCode, HelpCircle, CreditCard, LogIn, Settings, ArrowLeft, ArrowRight, User, MapPin, CheckCircle, Layers, Upload, CheckSquare, DollarSign } from "lucide-react";
 
 const logoUrl = "https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub-500-x-500-px.png?w=500"; // Updated logo URL
 
@@ -15,8 +15,8 @@ const pages = [
   { path: "/user-profile", name: "User Profile", icon: <User className="text-white w-8 h-8" /> },
   { path: "/image-upload", name: "Image Upload", icon: <Upload className="text-white w-8 h-8" /> },
   { path: "/account-verification", name: "Account Verification", icon: <CheckSquare className="text-white w-8 h-8" /> },
-  { path: "/document-scanning", name: "Document Scanning", icon: <File className="text-white w-8 h-8" /> },
-  { path: "/kyc-id-scanner", name: "KYC ID Scanner", icon: <IdCard className="text-white w-8 h-8" /> },
+  { path: "/document-scanning", name: "Document Scanning", icon: <Upload className="text-white w-8 h-8" /> }, // Replaced IdCard with Upload
+  { path: "/kyc-id-scanner", name: "KYC ID Scanner", icon: <Upload className="text-white w-8 h-8" /> }, // Replaced IdCard with Upload
   { path: "/id-upload", name: "ID Upload", icon: <Upload className="text-white w-8 h-8" /> },
   { path: "/id-verification", name: "ID Verification", icon: <CheckCircle className="text-white w-8 h-8" /> },
   { path: "/balance", name: "Balance", icon: <DollarSign className="text-white w-8 h-8" /> },
