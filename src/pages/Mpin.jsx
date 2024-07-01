@@ -60,7 +60,7 @@ const Mpin = () => {
           <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
         </div>
         {/* Verify Button */}
-        <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 mt-4 px-8 py-2">Verify</Button>
+        <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 mt-4 w-full max-w-xs mx-auto">Verify</Button>
         {/* Keypad */}
         <div className="grid grid-cols-3 gap-2 mt-4 w-full px-4">
           {["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"].map((key) => (
