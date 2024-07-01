@@ -9,12 +9,8 @@ const UserProfile = () => {
     { title: "My Linked Accounts", icon: <Link className="text-blue-900" /> },
     { title: "My QR Codes", icon: <QrCode className="text-blue-900" /> },
     { title: "Settings", icon: <Settings className="text-blue-900" /> },
-    { title: "GScore", icon: <Shield className="text-blue-900" /> },
     { title: "Terms and Conditions", icon: <FileText className="text-blue-900" /> },
     { title: "Privacy Choices", icon: <Lock className="text-blue-900" /> },
-    { title: "Alipay+", icon: <Gift className="text-blue-900" /> },
-    { title: "Voucher Pocket", icon: <Gift className="text-blue-900" /> },
-    { title: "Promos", icon: <Gift className="text-blue-900" /> },
     { title: "Help", icon: <HelpCircle className="text-blue-900" /> },
   ];
 
