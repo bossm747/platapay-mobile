@@ -4,7 +4,7 @@ import { Bell, Menu } from "lucide-react";
 
 const Header = () => {
   return (
-    <div className="bg-purple-900 text-white p-4 flex justify-between items-center">
+    <div className="bg-purple-900 text-white p-4 flex justify-between items-center shadow-lg shadow-[rgba(0,0,0,0.8)]">
       <Menu className="text-white" />
       <div className="flex items-center">
         <img src={platapayLogo} alt="Platapay Logo" className="h-8" />
