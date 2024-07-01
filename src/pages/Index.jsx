@@ -36,7 +36,9 @@ const Index = () => {
       {/* Body Content */}
       <div className="flex-1 flex flex-col items-center justify-center mt-8">
         {/* Title */}
-        <h1 className="text-white text-center mt-4">(MPIN)</h1>
+        <h1 className="text-white text-left text-4xl font-bold mt-4">BALANCE</h1>
+        {/* Balance Amount */}
+        <p className="text-white text-left text-4xl mt-2">₱747,747.00</p>
         {/* Illustration */}
         <div className="mt-4">
           <svg
