@@ -14,6 +14,7 @@ import KycIdScanner from "./pages/KycIdScanner.jsx";
 import IdUpload from "./pages/IdUpload.jsx";
 import IdVerification from "./pages/IdVerification.jsx";
 import Balance from "./pages/Balance.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/id-verification" element={<IdVerification />} />
         <Route path="/balance" element={<Balance />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
