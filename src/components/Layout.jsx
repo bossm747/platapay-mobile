@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Outlet, useLocation, Link } from "react-router-dom";
-import { Bell, Menu } from "lucide-react";
+import { Bell, Menu, Home, ArrowLeftRight, QrCode, Inbox, HelpCircle } from "lucide-react";
 
 const logoUrl = "https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub-2-1.png?w=1024"; // Provided logo URL
 
@@ -45,6 +45,7 @@ const Layout = () => {
         </div>
         <div className="flex flex-col items-center">
           <img src={logoUrl} alt="Platapay Logo" className="h-10 w-auto mb-2" />
+          <span className="text-2xl font-bold">Platapay</span>
           <span className="text-xl font-bold">{currentPage ? currentPage.name : "Home"}</span>
         </div>
         <Bell className="text-white" />
@@ -54,8 +55,14 @@ const Layout = () => {
         <Outlet />
       </div>
       {/* Sticky Footer */}
-      <div className="w-full flex justify-center items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 text-white p-2 fixed bottom-0 z-10">
-        <span className="text-center">Footer Content</span>
+      <div className="w-full flex justify-between items-center bg-purple-900 text-white p-4 fixed bottom-0 z-10">
+        <Home className="text-white w-8 h-8" />
+        <ArrowLeftRight className="text-white w-8 h-8" />
+        <div className="relative">
+          <QrCode className="text-white w-12 h-12 absolute -top-6 left-1/2 transform -translate-x-1/2 bg-purple-900 rounded-full p-2" />
+        </div>
+        <Inbox className="text-white w-8 h-8" />
+        <HelpCircle className="text-white w-8 h-8" />
       </div>
     </div>
   );
