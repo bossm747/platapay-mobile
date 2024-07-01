@@ -61,14 +61,6 @@ const Mpin = () => {
         </div>
         {/* Verify Button */}
         <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 mt-4 w-full max-w-xs mx-auto">Verify</Button>
-        {/* Keypad */}
-        <div className="grid grid-cols-3 gap-2 mt-4 w-full px-4">
-          {["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"].map((key) => (
-            <Button key={key} className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 w-full h-16">
-              {key}
-            </Button>
-          ))}
-        </div>
       </div>
       {/* Sticky Footer */}
       <div className="w-full flex justify-center items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 text-white p-2 fixed bottom-0 z-10">
