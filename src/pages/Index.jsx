@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowLeftRight, Smartphone, TrendingUp, Target, Shield, Star, PieChart, ShoppingBag, Send, Bitcoin, HelpCircle } from "lucide-react";
+import { ArrowLeftRight, Smartphone, TrendingUp, Target, Shield, Star, PieChart, ShoppingBag, Send, Bitcoin, HelpCircle, Menu, Bell } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -21,16 +21,16 @@ const Index = () => {
   return (
     <div className="h-screen w-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
       {/* Sticky Header */}
-      <div className="w-full flex justify-between items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 text-white p-2 fixed top-0 z-10">
-        <span className="ml-2">9:41</span>
-        <div className="flex items-center space-x-2">
-          <span>&#x2190;</span>
-          <span>📶</span>
-          <span>🔋</span>
+      <div className="w-full flex justify-between items-center bg-purple-900 text-white p-2 fixed top-0 z-10">
+        <Menu className="text-white" />
+        <div className="flex flex-col items-center">
+          <span className="text-2xl font-bold">Platapay</span>
+          <span className="text-xl font-bold">Home</span>
         </div>
+        <Bell className="text-white" />
       </div>
       {/* Screen Divider */}
-      <div className="w-full h-1 bg-blue-600 mt-8"></div>
+      <div className="w-full h-1 bg-blue-600 mt-16"></div>
       {/* Body Content */}
       <div className="flex-1 flex flex-col items-center justify-center mt-8">
         <div className="flex flex-col items-center mt-8">
