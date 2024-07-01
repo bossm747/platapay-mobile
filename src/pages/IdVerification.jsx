@@ -1,60 +1,73 @@
 import React, { useState } from "react";
+import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { ArrowLeft, Battery, Signal, Wifi, Camera, CreditCard } from "lucide-react";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
+import { ChevronDown } from "lucide-react";
+import Layout from "@/components/Layout";
 
 const IdVerification = () => {
-  const [isPoliticallyExposed, setIsPoliticallyExposed] = useState(false);
+  const [checked, setChecked] = useState(false);
 
   return (
-    <div className="h-screen w-screen flex flex-col items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 text-white">
-      {/* Status Bar */}
-      <div className="w-full flex justify-between items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 text-white p-2 fixed top-0 z-10">
-        <div className="flex items-center">
-          <ArrowLeft className="text-white" />
+    <Layout>
+      <div className="h-screen w-screen flex flex-col items-center bg-white">
+        {/* Status Bar */}
+        <div className="w-full flex justify-between items-center bg-black text-white p-2 fixed top-0 z-10">
           <span className="ml-2">9:41</span>
+          <div className="flex items-center space-x-2">
+            <span>📶</span>
+            <span>🔋</span>
+          </div>
         </div>
-        <div className="flex items-center space-x-2">
-          <Signal className="text-white" />
-          <Wifi className="text-white" />
-          <Battery className="text-white" />
+        {/* Light Blue Bar */}
+        <div className="w-full bg-blue-300 text-white p-2 text-center">
+          ID Verification
+        </div>
+        {/* Main Content Area */}
+        <div className="bg-white rounded-lg p-4 mt-4 w-11/12 shadow-lg">
+          <h1 className="text-gray-800 font-bold text-xl">Identification Card</h1>
+          <p className="text-gray-500 mt-2">A valid ID is required for verification</p>
+          {/* ID Card Icon */}
+          <div className="bg-blue-100 rounded-lg p-4 mt-4 flex justify-center items-center">
+            <div className="bg-white p-4 rounded-lg shadow-lg">
+              <div className="flex items-center justify-center">
+                <span className="text-green-500">✔️</span>
+                <span className="text-blue-500 ml-2">🛡️</span>
+              </div>
+            </div>
+          </div>
+          {/* ID Type */}
+          <Label className="text-gray-500 mt-4">ID Type</Label>
+          <Select>
+            <SelectTrigger className="w-full bg-blue-100 rounded mt-2">
+              <SelectValue placeholder="Select ID Type" />
+              <ChevronDown className="absolute right-2 top-2 text-gray-500" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="gsis">GSIS eID (Government Service Insurance System)</SelectItem>
+              <SelectItem value="sss">SSS ID (Social Security System)</SelectItem>
+              <SelectItem value="umid">UMID (Unified Multi-Purpose Identification)</SelectItem>
+              <SelectItem value="drivers">Driver's License</SelectItem>
+              <SelectItem value="voters">Voter's ID</SelectItem>
+            </SelectContent>
+          </Select>
+          {/* ID Number */}
+          <Label className="text-gray-500 mt-4">ID Number</Label>
+          <Input className="bg-blue-100 rounded mt-2" placeholder="0000 0000 0000 0000" />
+          {/* Checkbox */}
+          <div className="flex items-center space-x-2 mt-4">
+            <Checkbox checked={checked} onCheckedChange={setChecked} className="text-gray-500" />
+            <span className="text-gray-500">
+              I have read and understood the <span className="text-blue-500">Terms and Conditions</span> and <span className="text-blue-500">Data Privacy Policy</span>
+            </span>
+          </div>
+          {/* Next Button */}
+          <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 mt-8 w-full">Next</Button>
         </div>
       </div>
-      {/* Title */}
-      <h1 className="text-blue-300 font-bold mt-16">ID Verification</h1>
-      {/* Primary Instruction */}
-      <p className="text-white mt-4 text-center px-4">
-        Take a photo of your valid ID and specimen signature
-      </p>
-      {/* Subheader */}
-      <p className="text-gray-300 mt-2 text-center px-4">
-        Kindly provide required means of identification to keep your e-wallet safe.
-      </p>
-      {/* Buttons */}
-      <div className="flex space-x-4 mt-8">
-        <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 flex items-center space-x-2">
-          <CreditCard className="text-white" />
-          <span>Take ID photo</span>
-        </Button>
-        <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 flex items-center space-x-2">
-          <Camera className="text-white" />
-          <span>Take specimen signature</span>
-        </Button>
-      </div>
-      {/* Bulleted List */}
-      <ul className="text-white mt-8 px-4 list-disc">
-        <li>Ensure the ID is clear and readable.</li>
-        <li>Make sure the signature is visible.</li>
-        <li>Use a well-lit area for better quality.</li>
-      </ul>
-      {/* Checkbox */}
-      <div className="flex items-center space-x-2 mt-4">
-        <Checkbox checked={isPoliticallyExposed} onCheckedChange={setIsPoliticallyExposed} className="text-gray-700" />
-        <span className="text-white">I am considered a Politically Exposed Person</span>
-      </div>
-      {/* Next Button */}
-      <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 mt-8 w-4/5">Next</Button>
-    </div>
+    </Layout>
   );
 };
 
