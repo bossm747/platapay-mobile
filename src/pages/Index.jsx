@@ -1,9 +1,25 @@
 import React from "react";
+import { Phone, ArrowRight, Building, FileText, Hand, PiggyBank, UserPlus, Sprout, ShoppingCart, Gift, Leaf, CreditCard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 const Index = () => {
+  const services = [
+    { title: "Send", icon: <Phone className="text-blue-900" /> },
+    { title: "Load", icon: <ArrowRight className="text-blue-900" /> },
+    { title: "Transfer", icon: <Building className="text-blue-900" /> },
+    { title: "Bills", icon: <FileText className="text-blue-900" /> },
+    { title: "Borrow", icon: <Hand className="text-blue-900" /> },
+    { title: "GSave", icon: <PiggyBank className="text-blue-900" /> },
+    { title: "GInsure", icon: <UserPlus className="text-blue-900" /> },
+    { title: "GInvest", icon: <Sprout className="text-blue-900" /> },
+    { title: "GLife", icon: <ShoppingCart className="text-blue-900" /> },
+    { title: "A+ Rewards", icon: <Gift className="text-blue-900" /> },
+    { title: "GForest", icon: <Leaf className="text-blue-900" /> },
+    { title: "Cards", icon: <CreditCard className="text-blue-900" /> },
+  ];
+
   return (
     <div className="h-screen w-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
       {/* Sticky Header */}
@@ -63,10 +79,11 @@ const Index = () => {
         <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 mt-4 px-8 py-2">Verify</Button>
         {/* Keypad */}
         <div className="grid grid-cols-3 gap-2 mt-4 w-full px-4">
-          {["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"].map((key) => (
-            <Button key={key} className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 w-full h-16">
-            {key}
-          </Button>
+          {services.map((service, index) => (
+            <Button key={index} className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 w-full h-16 flex flex-col items-center justify-center">
+              {service.icon}
+              <span className="text-xs">{service.title}</span>
+            </Button>
           ))}
         </div>
       </div>
