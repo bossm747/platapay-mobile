@@ -1,5 +1,5 @@
 import React from "react";
-import { Bell, Phone, ArrowRight, Building, FileText, Hand, PiggyBank, UserPlus, Plant, ShoppingCart, Gift, Leaf, CreditCard } from "lucide-react";
+import { Bell, Phone, ArrowRight, Building, FileText, Hand, PiggyBank, UserPlus, Sprout, ShoppingCart, Gift, Leaf, CreditCard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar } from "@/components/ui/avatar";
 
@@ -12,7 +12,7 @@ const Balance = () => {
     { title: "Borrow", icon: <Hand className="text-blue-900" /> },
     { title: "GSave", icon: <PiggyBank className="text-blue-900" /> },
     { title: "GInsure", icon: <UserPlus className="text-blue-900" /> },
-    { title: "GInvest", icon: <Plant className="text-blue-900" /> },
+    { title: "GInvest", icon: <Sprout className="text-blue-900" /> },
     { title: "GLife", icon: <ShoppingCart className="text-blue-900" /> },
     { title: "A+ Rewards", icon: <Gift className="text-blue-900" /> },
     { title: "GForest", icon: <Leaf className="text-blue-900" /> },
