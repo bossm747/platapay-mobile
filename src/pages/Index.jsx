@@ -42,6 +42,13 @@ const Index = () => {
         </div>
         {/* Spacer */}
         <div className="h-8"></div>
+        {/* New Transaction Container */}
+        <div className="bg-gray-100 rounded-lg p-4 mt-4 w-11/12">
+          <h2 className="text-blue-900 text-lg">Recent Transactions</h2>
+          <p className="text-blue-900 mt-2">No recent transactions</p>
+        </div>
+        {/* Spacer */}
+        <div className="h-8"></div>
         {/* Keypad */}
         <div className="grid grid-cols-3 gap-2 mt-4 w-full px-4">
           {services.map((service, index) => (
