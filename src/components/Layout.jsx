@@ -1,26 +1,9 @@
 import React, { useState } from "react";
 import { Outlet, useLocation, Link } from "react-router-dom";
-import { Bell, Menu, Home, Inbox, QrCode, HelpCircle, CreditCard, LogIn, Settings, ArrowLeft, ArrowRight, User, MapPin, CheckCircle, Layers, Upload, CheckSquare, DollarSign } from "lucide-react";
+import { Bell, Menu, Home, Inbox, QrCode, HelpCircle, CreditCard, LogIn, Settings, ArrowLeft, ArrowRight } from "lucide-react";
+import pages from "../pagesConfig";
 
-const logoUrl = "https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub-500-x-500-px.png?w=500"; // Updated logo URL
-
-const pages = [
-  { path: "/", name: "Home", icon: <Home className="text-white w-8 h-8" /> },
-  { path: "/otp-verification", name: "OTP Verification", icon: <QrCode className="text-white w-8 h-8" /> },
-  { path: "/mpin", name: "MPIN", icon: <CreditCard className="text-white w-8 h-8" /> },
-  { path: "/user-info-form", name: "User Info Form", icon: <User className="text-white w-8 h-8" /> },
-  { path: "/home-address-form", name: "Home Address Form", icon: <MapPin className="text-white w-8 h-8" /> },
-  { path: "/success", name: "Success", icon: <CheckCircle className="text-white w-8 h-8" /> },
-  { path: "/platapay-style-sheet", name: "Platapay Style Sheet", icon: <Layers className="text-white w-8 h-8" /> },
-  { path: "/user-profile", name: "User Profile", icon: <User className="text-white w-8 h-8" /> },
-  { path: "/image-upload", name: "Image Upload", icon: <Upload className="text-white w-8 h-8" /> },
-  { path: "/account-verification", name: "Account Verification", icon: <CheckSquare className="text-white w-8 h-8" /> },
-  { path: "/document-scanning", name: "Document Scanning", icon: <Upload className="text-white w-8 h-8" /> }, // Replaced IdCard with Upload
-  { path: "/kyc-id-scanner", name: "KYC ID Scanner", icon: <Upload className="text-white w-8 h-8" /> }, // Replaced IdCard with Upload
-  { path: "/id-upload", name: "ID Upload", icon: <Upload className="text-white w-8 h-8" /> },
-  { path: "/id-verification", name: "ID Verification", icon: <CheckCircle className="text-white w-8 h-8" /> },
-  { path: "/balance", name: "Balance", icon: <DollarSign className="text-white w-8 h-8" /> },
-];
+const logoUrl = "https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub-500-x-500-px.png?w=500";
 
 const Layout = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -52,7 +35,7 @@ const Layout = () => {
               </button>
               {pages.map(page => (
                 <Link key={page.path} to={page.path} className="flex items-center px-2 py-3 hover:bg-purple-700" onClick={() => setMenuOpen(false)}>
-                  {page.icon}
+                  {React.createElement(page.icon, { className: "text-white w-8 h-8" })}
                   {!collapsed && <span className="ml-4">{page.name}</span>}
                 </Link>
               ))}
