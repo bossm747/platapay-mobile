@@ -21,15 +21,7 @@ const Index = () => {
 
   return (
     <div className="h-screen w-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
-      {/* Sticky Header */}
-      <div className="w-full flex justify-between items-center bg-purple-900 text-white p-2 fixed top-0 z-10">
-        <Menu className="text-white" />
-        <div className="flex flex-col items-center">
-          <span className="text-2xl font-bold">Platapay</span>
-          <span className="text-xl font-bold">Home</span>
-        </div>
-        <Bell className="text-white" />
-      </div>
+      
       {/* Screen Divider */}
       <div className="w-full h-1 bg-blue-600 mt-16"></div>
       {/* Body Content */}
@@ -57,10 +49,7 @@ const Index = () => {
           ))}
         </div>
       </div>
-      {/* Sticky Footer */}
-      <div className="w-full flex justify-center items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 text-white p-2 fixed bottom-0 z-10">
-        <span className="text-center">Footer Content</span>
-      </div>
+      
     </div>
   );
 };
