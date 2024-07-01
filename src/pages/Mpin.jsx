@@ -45,19 +45,19 @@ const Mpin = () => {
         <Label className="text-blue-300 mt-4">Enter 4 Digit MPIN code</Label>
         {/* Entry Field Set 1 */}
         <div className="flex space-x-2 mt-2">
-          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input type="tel" className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input type="tel" className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input type="tel" className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input type="tel" className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
         </div>
         {/* Instruction 2 */}
         <Label className="text-blue-300 mt-4">Confirm 4 Digit MPIN code</Label>
         {/* Entry Field Set 2 */}
         <div className="flex space-x-2 mt-2">
-          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input type="tel" className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input type="tel" className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input type="tel" className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input type="tel" className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
         </div>
         {/* Verify Button */}
         <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 mt-4 w-full max-w-xs mx-auto">Verify</Button>
