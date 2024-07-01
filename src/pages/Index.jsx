@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowLeftRight, Smartphone, TrendingUp, Target, Shield, Star, PieChart, ShoppingBag, Send, Bitcoin, HelpCircle, Menu, Bell } from "lucide-react";
+import { ArrowLeftRight, Smartphone, TrendingUp, Target, Shield, Star, PieChart, ShoppingBag, Send, Bitcoin, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
