@@ -33,11 +33,11 @@ const Index = () => {
       <div className="w-full h-1 bg-blue-600 mt-8"></div>
       {/* Body Content */}
       <div className="flex-1 flex flex-col items-center justify-center mt-8">
-        <div className="flex flex-col items-start mt-8">
+        <div className="flex flex-col items-center mt-8">
           {/* Title */}
-          <h1 className="text-white text-left text-4xl font-bold mt-4">BALANCE</h1>
+          <h1 className="text-white text-center text-4xl font-bold mt-4">BALANCE</h1>
           {/* Balance Amount */}
-          <p className="text-white text-left text-4xl mt-2">₱747,747.00</p>
+          <p className="text-white text-center text-4xl mt-2">₱747,747.00</p>
         </div>
         {/* Wallet Buttons */}
         <div className="flex space-x-4 mt-4">
