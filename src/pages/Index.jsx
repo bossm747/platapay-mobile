@@ -37,6 +37,13 @@ const Index = () => {
         <h1 className="text-white text-left text-4xl font-bold mt-4">BALANCE</h1>
         {/* Balance Amount */}
         <p className="text-white text-left text-4xl mt-2">₱747,747.00</p>
+        {/* Wallet Buttons */}
+        <div className="flex space-x-4 mt-4">
+          <Button className="bg-green-500 text-white shadow-lg shadow-[rgba(0,0,0,0.5)]">Wallet Topup</Button>
+          <Button className="bg-black text-white border border-white rounded shadow-lg shadow-[rgba(255,255,255,0.5)]">Wallet Cashout</Button>
+        </div>
+        {/* Spacer */}
+        <div className="h-8"></div>
         {/* Keypad */}
         <div className="grid grid-cols-3 gap-2 mt-4 w-full px-4">
           {services.map((service, index) => (
