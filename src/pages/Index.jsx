@@ -1,25 +1,9 @@
 import React from "react";
-import { Phone, ArrowRight, Building, FileText, Hand, PiggyBank, UserPlus, Sprout, ShoppingCart, Gift, Leaf, CreditCard, ArrowLeftRight, Smartphone, DollarSign, TrendingUp, Target, Shield, Star, PieChart, ShoppingBag, Send, Bitcoin, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 const Index = () => {
-  const services = [
-    { title: "Plata PayMe", icon: <ArrowLeftRight className="text-white" /> },
-    { title: "Plata PaLoad", icon: <Smartphone className="text-white" /> },
-    { title: "Plata PaLoan", icon: <span className="text-white">PHP</span> },
-    { title: "Plata Invest", icon: <TrendingUp className="text-white" /> },
-    { title: "Plata Goals", icon: <Target className="text-white" /> },
-    { title: "Plata Protect", icon: <Shield className="text-white" /> },
-    { title: "Plata Rewards", icon: <Star className="text-white" /> },
-    { title: "Plata Budget", icon: <PieChart className="text-white" /> },
-    { title: "Plata Shop", icon: <ShoppingBag className="text-white" /> },
-    { title: "Plata Remit", icon: <Send className="text-white" /> },
-    { title: "Plata Crypto", icon: <Bitcoin className="text-white" /> },
-    { title: "Plata Support", icon: <HelpCircle className="text-white" /> },
-  ];
-
   return (
     <div className="h-screen w-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
       {/* Sticky Header */}
@@ -54,36 +38,35 @@ const Index = () => {
           </svg>
         </div>
         {/* Prompt */}
-        <p className="text-white text-center mt-4">
+        <p className="text-blue-200 text-center mt-4">
           Nominate a 4-digit Mobile Personal Identification Number (MPIN).
         </p>
         {/* Instruction 1 */}
-        <Label className="text-white mt-4">Enter 4 Digit MPIN code</Label>
+        <Label className="text-blue-300 mt-4">Enter 4 Digit MPIN code</Label>
         {/* Entry Field Set 1 */}
         <div className="flex space-x-2 mt-2">
-          <Input className="w-12 h-12 text-center border-2 border-white" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-white" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-white" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-white" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
         </div>
         {/* Instruction 2 */}
-        <Label className="text-white mt-4">Confirm 4 Digit MPIN code</Label>
+        <Label className="text-blue-300 mt-4">Confirm 4 Digit MPIN code</Label>
         {/* Entry Field Set 2 */}
         <div className="flex space-x-2 mt-2">
-          <Input className="w-12 h-12 text-center border-2 border-white" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-white" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-white" maxLength={1} />
-          <Input className="w-12 h-12 text-center border-2 border-white" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
+          <Input className="w-12 h-12 text-center border-2 border-blue-300" maxLength={1} />
         </div>
         {/* Verify Button */}
         <Button className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 mt-4 px-8 py-2">Verify</Button>
         {/* Keypad */}
         <div className="grid grid-cols-3 gap-2 mt-4 w-full px-4">
-          {services.map((service, index) => (
-            <Button key={index} className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 w-full h-16 flex flex-col items-center justify-center">
-              {service.icon}
-              <span className="text-xs text-white">{service.title}</span>
-            </Button>
+          {["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"].map((key) => (
+            <Button key={key} className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 w-full h-16">
+            {key}
+          </Button>
           ))}
         </div>
       </div>
