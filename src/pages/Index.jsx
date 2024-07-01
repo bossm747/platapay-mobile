@@ -40,7 +40,7 @@ const Index = () => {
         {/* Wallet Buttons */}
         <div className="flex space-x-4 mt-4">
           <Button className="bg-green-500 text-white shadow-lg shadow-[rgba(0,0,0,0.5)]">Wallet Topup</Button>
-          <Button className="bg-black text-white border border-white rounded shadow-lg shadow-[rgba(255,255,255,0.5)]">Wallet Cashout</Button>
+          <Button className="bg-purple-900 text-white border border-white rounded shadow-lg shadow-[rgba(0,0,0,0.9)]">Wallet Cashout</Button>
         </div>
         {/* Spacer */}
         <div className="h-8"></div>
