@@ -37,8 +37,20 @@ const Index = () => {
           <Button className="bg-green-500 text-white shadow-lg shadow-[rgba(0,0,0,0.5)]">Wallet Topup</Button>
           <Button className="bg-purple-900 text-white border border-white border-[0.5px] rounded shadow-lg shadow-[rgba(0,0,0,0.9)]">Wallet Cashout</Button>
         </div>
-        {/* Spacer */}
-        <div className="h-8"></div>
+        {/* Transaction Container */}
+        <div className="bg-white rounded-lg p-4 mt-8 w-11/12 shadow-lg">
+          <h2 className="text-blue-900 text-lg">Transactions</h2>
+          <div className="flex flex-col space-y-2 mt-4">
+            <div className="flex justify-between">
+              <span className="text-blue-900">Cash In</span>
+              <span className="text-blue-900">₱10,000.00</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-blue-900">Cash Out</span>
+              <span className="text-blue-900">₱5,000.00</span>
+            </div>
+          </div>
+        </div>
         {/* Keypad */}
         <div className="grid grid-cols-3 gap-2 mt-4 w-full px-4">
           {services.map((service, index) => (
