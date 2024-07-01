@@ -1,5 +1,5 @@
 import React from "react";
-import { Phone, ArrowRight, Building, FileText, Hand, PiggyBank, UserPlus, Sprout, ShoppingCart, Gift, Leaf, CreditCard, ArrowLeftRight } from "lucide-react";
+import { Phone, ArrowRight, Building, FileText, Hand, PiggyBank, UserPlus, Sprout, ShoppingCart, Gift, Leaf, CreditCard, ArrowLeftRight, Mobile, DollarSign, TrendingUp, Target, Shield, Star, PieChart, ShoppingBag, Send, Bitcoin, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -7,17 +7,17 @@ import { Label } from "@/components/ui/label";
 const Index = () => {
   const services = [
     { title: "Plata PayMe", icon: <ArrowLeftRight className="text-white" /> },
-    { title: "Load", icon: <ArrowRight className="text-white" /> },
-    { title: "Transfer", icon: <Building className="text-white" /> },
-    { title: "Bills", icon: <FileText className="text-white" /> },
-    { title: "Borrow", icon: <Hand className="text-white" /> },
-    { title: "GSave", icon: <PiggyBank className="text-white" /> },
-    { title: "GInsure", icon: <UserPlus className="text-white" /> },
-    { title: "GInvest", icon: <Sprout className="text-white" /> },
-    { title: "GLife", icon: <ShoppingCart className="text-white" /> },
-    { title: "A+ Rewards", icon: <Gift className="text-white" /> },
-    { title: "GForest", icon: <Leaf className="text-white" /> },
-    { title: "Cards", icon: <CreditCard className="text-white" /> },
+    { title: "Plata PaLoad", icon: <Mobile className="text-white" /> },
+    { title: "Plata PaLoan", icon: <DollarSign className="text-white" /> },
+    { title: "Plata Invest", icon: <TrendingUp className="text-white" /> },
+    { title: "Plata Goals", icon: <Target className="text-white" /> },
+    { title: "Plata Protect", icon: <Shield className="text-white" /> },
+    { title: "Plata Rewards", icon: <Star className="text-white" /> },
+    { title: "Plata Budget", icon: <PieChart className="text-white" /> },
+    { title: "Plata Shop", icon: <ShoppingBag className="text-white" /> },
+    { title: "Plata Remit", icon: <Send className="text-white" /> },
+    { title: "Plata Crypto", icon: <Bitcoin className="text-white" /> },
+    { title: "Plata Support", icon: <HelpCircle className="text-white" /> },
   ];
 
   return (
