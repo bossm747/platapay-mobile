@@ -35,7 +35,7 @@ const Layout = () => {
       {/* Sticky Header */}
       <div className="w-full flex justify-between items-center bg-purple-900 text-white p-2 fixed top-0 z-10">
         <div className="relative">
-          <Menu className="text-white cursor-pointer" onClick={() => setMenuOpen(!menuOpen)} />
+          <Menu className="text-white cursor-pointer lg:hidden" onClick={() => setMenuOpen(!menuOpen)} />
         </div>
         <div className="flex flex-col items-center">
           <img src={logoUrl} alt="Platapay Logo" className="h-10 w-auto mb-2" />
@@ -44,9 +44,9 @@ const Layout = () => {
         </div>
         <Bell className="text-white" />
       </div>
-      {/* Sliding Menu */}
+      {/* Sliding Menu for Mobile */}
       {menuOpen && (
-        <div ref={menuRef} className={`fixed top-0 left-0 h-full bg-purple-900 text-white shadow-2xl z-20 ${collapsed ? 'w-16' : 'w-1/2'} transition-width duration-300`}>
+        <div ref={menuRef} className={`fixed top-0 left-0 h-full bg-purple-900 text-white shadow-2xl z-20 lg:hidden ${collapsed ? 'w-16' : 'w-1/2'} transition-width duration-300`}>
           <div className="p-4 flex flex-col justify-between h-full">
             <div className="flex-1 overflow-y-auto">
               <button onClick={() => setCollapsed(!collapsed)} className="text-white w-full text-left mb-4">
@@ -72,8 +72,34 @@ const Layout = () => {
           </div>
         </div>
       )}
+      {/* Side Menu for Desktop and Tablet */}
+      <div className="hidden lg:flex lg:flex-col lg:w-64 lg:bg-purple-900 lg:text-white lg:fixed lg:top-0 lg:left-0 lg:h-full lg:shadow-2xl">
+        <div className="p-4 flex flex-col justify-between h-full">
+          <div className="flex-1 overflow-y-auto">
+            <button onClick={() => setCollapsed(!collapsed)} className="text-white w-full text-left mb-4">
+              {collapsed ? <ArrowRight className="w-8 h-8" /> : <ArrowLeft className="w-8 h-8" />}
+            </button>
+            {pages.map(page => (
+              <Link key={page.path} to={page.path} className="flex items-center px-2 py-3 hover:bg-purple-700 text-sm">
+                {React.createElement(page.icon, { className: "text-white w-8 h-8" })}
+                {!collapsed && <span className="ml-4">{page.name}</span>}
+              </Link>
+            ))}
+          </div>
+          <div className="mt-4">
+            <Link to="/login" className="flex items-center px-2 py-3 hover:bg-purple-700 text-sm">
+              <LogIn className="text-white w-8 h-8" />
+              {!collapsed && <span className="ml-4">Log In/Out</span>}
+            </Link>
+            <Link to="/settings" className="flex items-center px-2 py-3 hover:bg-purple-700 text-sm">
+              <Settings className="text-white w-8 h-8" />
+              {!collapsed && <span className="ml-4">Settings</span>}
+            </Link>
+          </div>
+        </div>
+      </div>
       {/* Body Content */}
-      <div className="flex-1 mt-16 mb-16 p-4">
+      <div className="flex-1 mt-16 mb-16 p-4 lg:ml-64">
         <Outlet />
       </div>
       {/* Sticky Footer */}
