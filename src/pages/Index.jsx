@@ -20,36 +20,25 @@ const Index = () => {
   ];
 
   return (
-    <div className="h-screen w-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
-      
-      {/* Screen Divider */}
-      <div className="w-full h-1 bg-blue-600 mt-16"></div>
-      {/* Body Content */}
-      <div className="flex-1 flex flex-col items-center justify-center mt-8">
-        <div className="flex flex-col items-center mt-8">
-          {/* Title */}
-          <h1 className="text-white text-center text-4xl font-bold mt-4">BALANCE</h1>
-          {/* Balance Amount */}
-          <p className="text-white text-center text-4xl mt-2">₱747,747.00</p>
+    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 p-4 lg:p-8">
+      <div className="w-full max-w-4xl">
+        <div className="flex flex-col items-center mb-8">
+          <h1 className="text-white text-center text-4xl lg:text-5xl font-bold">BALANCE</h1>
+          <p className="text-white text-center text-4xl lg:text-5xl mt-2">₱747,747.00</p>
         </div>
-        {/* Wallet Buttons */}
-        <div className="flex space-x-4 mt-4">
-          <Button className="bg-green-500 text-white shadow-lg shadow-[rgba(0,0,0,0.5)]">Wallet Topup</Button>
-          <Button className="bg-purple-900 text-white border border-white border-[0.5px] rounded shadow-lg shadow-[rgba(0,0,0,0.9)]">Wallet Cashout</Button>
+        <div className="flex justify-center space-x-4 mb-8">
+          <Button className="bg-green-500 text-white shadow-lg shadow-[rgba(0,0,0,0.5)] px-6 py-3">Wallet Topup</Button>
+          <Button className="bg-purple-900 text-white border border-white border-[0.5px] rounded shadow-lg shadow-[rgba(0,0,0,0.9)] px-6 py-3">Wallet Cashout</Button>
         </div>
-        {/* Spacer */}
-        <div className="h-8"></div>
-        {/* Keypad */}
-        <div className="grid grid-cols-3 gap-2 mt-4 w-full px-4">
+        <div className="grid grid-cols-3 lg:grid-cols-4 gap-4">
           {services.map((service, index) => (
-            <Button key={index} className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 active:shadow-none active:translate-y-1 w-full h-16 flex flex-col items-center justify-center">
+            <Button key={index} className="shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 hover:bg-blue-600 active:shadow-none active:translate-y-1 w-full h-24 lg:h-32 flex flex-col items-center justify-center transition-all duration-200">
               {service.icon}
-              <span className="text-xs text-white">{service.title}</span>
+              <span className="text-sm lg:text-base text-white mt-2">{service.title}</span>
             </Button>
           ))}
         </div>
       </div>
-      
     </div>
   );
 };
