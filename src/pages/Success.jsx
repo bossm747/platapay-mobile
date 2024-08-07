@@ -4,16 +4,8 @@ import { Button } from "@/components/ui/button";
 const Success = () => {
   return (
     <div className="h-screen w-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
-      {/* Status Bar */}
-      <div className="w-full flex justify-between items-center bg-black text-white p-2 fixed top-0 z-10">
-        <span className="ml-2">9:41</span>
-        <div className="flex items-center space-x-2">
-          <span>📶</span>
-          <span>🔋</span>
-        </div>
-      </div>
       {/* Check Mark */}
-      <div className="flex flex-col items-center mt-16">
+      <div className="flex flex-col items-center">
         <div className="bg-green-600 rounded-full p-4">
           <svg
             width="64"

@@ -13,16 +13,8 @@ const IdVerification = () => {
   return (
     <Layout>
       <div className="h-screen w-screen flex flex-col items-center bg-white">
-        {/* Status Bar */}
-        <div className="w-full flex justify-between items-center bg-black text-white p-2 fixed top-0 z-10">
-          <span className="ml-2">9:41</span>
-          <div className="flex items-center space-x-2">
-            <span>📶</span>
-            <span>🔋</span>
-          </div>
-        </div>
         {/* Light Blue Bar */}
-        <div className="w-full bg-blue-300 text-white p-2 text-center">
+        <div className="w-full bg-blue-300 text-white p-2 text-center mt-2">
           ID Verification
         </div>
         {/* Main Content Area */}

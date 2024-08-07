@@ -23,7 +23,7 @@ const Balance = () => {
     <div className="h-screen w-screen flex flex-col items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
       
       {/* Platapay Logo */}
-      <div className="flex items-center mt-16">
+      <div className="flex items-center mt-4">
         <Avatar className="bg-gradient-to-r from-gray-400 to-gray-200 text-blue-900">P</Avatar>
         <div className="ml-4">
           <div className="text-white text-xl">Platapay</div>

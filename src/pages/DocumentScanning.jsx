@@ -5,20 +5,8 @@ import { ChevronLeft, Wifi, Battery, Signal } from "lucide-react";
 const DocumentScanning = () => {
   return (
     <div className="h-screen w-screen flex flex-col items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
-      {/* Top Bar */}
-      <div className="w-full flex justify-between items-center bg-gray-200 text-white p-2 fixed top-0 z-10">
-        <div className="flex items-center">
-          <ChevronLeft className="text-white" />
-          <span className="ml-2">9:41</span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <Signal className="text-white" />
-          <Wifi className="text-white" />
-          <Battery className="text-white" />
-        </div>
-      </div>
       {/* Down List Text */}
-      <div className="mt-12 text-white text-center">
+      <div className="mt-4 text-white text-center">
         <span>down list</span>
       </div>
       {/* Crop Button */}

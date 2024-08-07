@@ -18,15 +18,7 @@ const UserProfile = () => {
     <div className="bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 min-h-screen">
       {/* Header Bar */}
       <div className="bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 text-white p-4">
-        <div className="flex justify-between items-center">
-          <span>4:49</span>
-          <div className="flex items-center space-x-2">
-            <span>📶</span>
-            <span>📶</span>
-            <span>🔋</span>
-          </div>
-        </div>
-        <div className="flex items-center mt-4">
+        <div className="flex items-center">
           <Avatar className="bg-white text-blue-900">MA</Avatar>
           <div className="ml-4">
             <div>Marc Roland Agbay</div>

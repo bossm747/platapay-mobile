@@ -6,19 +6,10 @@ import { Label } from "@/components/ui/label";
 const Mpin = () => {
   return (
     <div className="h-screen w-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
-      {/* Sticky Header */}
-      <div className="w-full flex justify-between items-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 text-white p-2 fixed top-0 z-10">
-        <span className="ml-2">9:41</span>
-        <div className="flex items-center space-x-2">
-          <span>&#x2190;</span>
-          <span>📶</span>
-          <span>🔋</span>
-        </div>
-      </div>
       {/* Screen Divider */}
-      <div className="w-full h-1 bg-blue-600 mt-8"></div>
+      <div className="w-full h-1 bg-blue-600 mt-2"></div>
       {/* Body Content */}
-      <div className="flex-1 flex flex-col items-center justify-center mt-8">
+      <div className="flex-1 flex flex-col items-center justify-center mt-4">
         {/* Title */}
         <h1 className="text-white text-center mt-4">(MPIN)</h1>
         {/* Illustration */}

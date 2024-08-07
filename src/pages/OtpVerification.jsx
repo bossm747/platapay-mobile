@@ -6,17 +6,8 @@ import { Label } from "@/components/ui/label";
 const OtpVerification = () => {
   return (
     <div className="h-screen w-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
-      {/* Status Bar */}
-      <div className="w-full flex justify-between items-center bg-gray-800 text-white p-2 fixed top-0 z-10">
-        <span className="text-green-500 ml-2">9:41</span>
-        <div className="flex items-center space-x-2">
-          <span className="text-green-500">&#x2190;</span>
-          <span className="text-white">📶</span>
-          <span className="text-green-500">🔋</span>
-        </div>
-      </div>
       {/* Back Arrow */}
-      <div className="w-full flex justify-start p-2 mt-8">
+      <div className="w-full flex justify-start p-2 mt-2">
         <span className="text-green-500">&#x2190;</span>
       </div>
       {/* Phone Icon */}
