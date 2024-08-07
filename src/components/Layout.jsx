@@ -34,7 +34,9 @@ const Layout = ({ children }) => {
             <Link
               key={page.path}
               to={page.path}
-              className="flex items-center px-2 py-3 hover:bg-purple-700 text-sm"
+              className={`flex items-center px-2 py-3 hover:bg-purple-700 text-sm ${
+                location.pathname === page.path ? 'bg-purple-700' : ''
+              }`}
               onClick={() => setMenuOpen(false)}
             >
               {React.createElement(page.icon, { className: "text-white w-6 h-6 mr-2" })}

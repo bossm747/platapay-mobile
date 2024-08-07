@@ -9,8 +9,10 @@ const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <SupabaseProvider>
-      <App />
-    </SupabaseProvider>
+    <QueryClientProvider client={queryClient}>
+      <SupabaseProvider>
+        <App />
+      </SupabaseProvider>
+    </QueryClientProvider>
   </React.StrictMode>,
 );

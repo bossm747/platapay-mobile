@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useSupabaseAuth } from './integrations/supabase/auth';
 import Layout from './components/Layout';
 import Index from './pages/Index';
 import Mpin from './pages/Mpin';
@@ -18,6 +19,12 @@ import IdVerification from './pages/IdVerification';
 import Balance from './pages/Balance';
 
 function App() {
+  const { loading } = useSupabaseAuth();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <Router>
       <Layout>
