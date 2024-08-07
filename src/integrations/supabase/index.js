@@ -19,52 +19,53 @@ const fromSupabase = async (query) => {
 
 /* supabase integration types
 
-### Test
+// EXAMPLE TYPES SECTION
+// DO NOT USE TYPESCRIPT
 
-| name       | type                     | format | required |
-|------------|--------------------------|--------|----------|
-| id         | bigint                   | number | true     |
-| created_at | timestamp with time zone | string | true     |
+### foos
 
+| name    | type | format | required |
+|---------|------|--------|----------|
+| id      | int8 | number | true     |
+| title   | text | string | true     |
+| date    | date | string | true     |
+
+### bars
+
+| name    | type | format | required |
+|---------|------|--------|----------|
+| id      | int8 | number | true     |
+| foo_id  | int8 | number | true     |  // foreign key to foos
+	
 */
 
-// Hooks for Test table
-export const useTests = () => useQuery({
-    queryKey: ['tests'],
-    queryFn: () => fromSupabase(supabase.from('Test').select('*'))
-});
+// Example hook for models
 
-export const useTest = (id) => useQuery({
-    queryKey: ['test', id],
-    queryFn: () => fromSupabase(supabase.from('Test').select('*').eq('id', id).single())
-});
-
-export const useAddTest = () => {
+export const useFoo = ()=> useQuery({
+    queryKey: ['foos'],
+    queryFn: fromSupabase(supabase.from('foos')),
+})
+export const useAddFoo = () => {
     const queryClient = useQueryClient();
     return useMutation({
-        mutationFn: (newTest) => fromSupabase(supabase.from('Test').insert([newTest])),
-        onSuccess: () => {
-            queryClient.invalidateQueries('tests');
+        mutationFn: (newFoo)=> fromSupabase(supabase.from('foos').insert([{ title: newFoo.title }])),
+        onSuccess: ()=> {
+            queryClient.invalidateQueries('foos');
         },
     });
 };
 
-export const useUpdateTest = () => {
+export const useBar = ()=> useQuery({
+    queryKey: ['bars'],
+    queryFn: fromSupabase(supabase.from('bars')),
+})
+export const useAddBar = () => {
     const queryClient = useQueryClient();
     return useMutation({
-        mutationFn: ({ id, ...updateData }) => fromSupabase(supabase.from('Test').update(updateData).eq('id', id)),
-        onSuccess: () => {
-            queryClient.invalidateQueries('tests');
+        mutationFn: (newBar)=> fromSupabase(supabase.from('bars').insert([{ foo_id: newBar.foo_id }])),
+        onSuccess: ()=> {
+            queryClient.invalidateQueries('bars');
         },
     });
 };
 
-export const useDeleteTest = () => {
-    const queryClient = useQueryClient();
-    return useMutation({
-        mutationFn: (id) => fromSupabase(supabase.from('Test').delete().eq('id', id)),
-        onSuccess: () => {
-            queryClient.invalidateQueries('tests');
-        },
-    });
-};
