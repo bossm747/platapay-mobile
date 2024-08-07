@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import platapayLogo from "@/public/images/platapay-logo.png";
+import AIAssistant from "@/components/AIAssistant";
 
 const Index = () => {
   const features = [
@@ -40,6 +41,14 @@ const Index = () => {
               </Link>
             ))}
           </div>
+        </CardContent>
+      </Card>
+      <Card className="w-full max-w-4xl bg-white/10 backdrop-blur-md mt-8">
+        <CardHeader>
+          <CardTitle className="text-white text-2xl">AI Assistant</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <AIAssistant />
         </CardContent>
       </Card>
     </div>
