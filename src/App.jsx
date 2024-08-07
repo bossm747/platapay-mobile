@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import Index from './pages/Index';
 import { SupabaseAuthProvider } from './integrations/supabase/auth';
@@ -30,6 +30,7 @@ function App() {
               <Route path="/" element={<Index />} />
               <Route path="/otp-verification" element={<OtpVerification />} />
               <Route path="/mpin" element={<Mpin />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
               <Route path="/user-info-form" element={<UserInfoForm />} />
               <Route path="/home-address-form" element={<HomeAddressForm />} />
               <Route path="/success" element={<Success />} />
