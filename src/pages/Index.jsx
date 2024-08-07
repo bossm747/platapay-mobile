@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import CommitDiffViewer from "../components/CommitDiffViewer";
 
 const Index = () => {
   return (
@@ -73,6 +74,7 @@ const Index = () => {
           </Button>
         </Link>
       </div>
+      <CommitDiffViewer />
     </div>
   );
 };
