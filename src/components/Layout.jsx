@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-import { useLocation, Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Bell, Menu, Home, Inbox, QrCode, HelpCircle, CreditCard, LogIn, Settings } from "lucide-react";
-import pages from "../pagesConfig";
-
-const logoUrl = "https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub-500-x-500-px.png?w=500";
+import React, { useState } from 'react';
+import { useLocation, Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Menu, Bell, Home, CreditCard, QrCode, Inbox, HelpCircle } from 'lucide-react';
+import logoUrl from '@/public/images/platapay-logo.png';
+import pages from '../pagesConfig';
 
 const Layout = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,15 +12,6 @@ const Layout = ({ children }) => {
 
   return (
     <div className="min-h-screen w-full flex flex-col bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900">
-      {/* Status Bar */}
-      <div className="bg-black text-white p-2 flex justify-between items-center">
-        <span>9:41</span>
-        <div className="flex space-x-2">
-          <span>📶</span>
-          <span>🔋</span>
-        </div>
-      </div>
-
       {/* Header */}
       <header className="bg-purple-900 text-white p-4 flex justify-between items-center">
         <Menu className="text-white cursor-pointer" onClick={() => setMenuOpen(!menuOpen)} />
