@@ -1,13 +1,27 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import { SupabaseProvider } from './integrations/supabase/index.js';
 import App from './App.jsx';
 import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const canvas = document.createElement('canvas');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+document.body.appendChild(canvas);
+
+const ctx = canvas.getContext('2d');
+
+const root = createRoot(canvas);
+root.render(
   <React.StrictMode>
     <SupabaseProvider>
-      <App />
+      <App ctx={ctx} />
     </SupabaseProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
+
+// Resize canvas on window resize
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
