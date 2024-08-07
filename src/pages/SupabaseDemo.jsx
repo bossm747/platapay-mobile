@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTests, useAddTest, useUpdateTest, useDeleteTest } from '../integrations/supabase';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useToast } from "@/components/ui/use-toast";
 
 const SupabaseDemo = () => {
   const [newItemName, setNewItemName] = useState('');
@@ -9,24 +10,40 @@ const SupabaseDemo = () => {
   const addTestMutation = useAddTest();
   const updateTestMutation = useUpdateTest();
   const deleteTestMutation = useDeleteTest();
+  const { toast } = useToast();
 
   const handleAddItem = async () => {
     if (newItemName.trim()) {
-      await addTestMutation.mutateAsync({ name: newItemName });
-      setNewItemName('');
+      try {
+        await addTestMutation.mutateAsync({ name: newItemName });
+        setNewItemName('');
+        toast({ title: "Item added successfully", type: "success" });
+      } catch (error) {
+        toast({ title: "Failed to add item", description: error.message, type: "error" });
+      }
     }
   };
 
   const handleUpdateItem = async (id, newName) => {
-    await updateTestMutation.mutateAsync({ id, name: newName });
+    try {
+      await updateTestMutation.mutateAsync({ id, name: newName });
+      toast({ title: "Item updated successfully", type: "success" });
+    } catch (error) {
+      toast({ title: "Failed to update item", description: error.message, type: "error" });
+    }
   };
 
   const handleDeleteItem = async (id) => {
-    await deleteTestMutation.mutateAsync(id);
+    try {
+      await deleteTestMutation.mutateAsync(id);
+      toast({ title: "Item deleted successfully", type: "success" });
+    } catch (error) {
+      toast({ title: "Failed to delete item", description: error.message, type: "error" });
+    }
   };
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error fetching data</div>;
+  if (isLoading) return <div className="text-white text-center p-4">Loading...</div>;
+  if (isError) return <div className="text-red-500 text-center p-4">Error fetching data</div>;
 
   return (
     <div className="p-4 bg-gradient-to-r from-blue-900 via-blue-700 to-purple-900 min-h-screen">
@@ -39,7 +56,9 @@ const SupabaseDemo = () => {
           placeholder="New item name"
           className="mr-2"
         />
-        <Button onClick={handleAddItem}>Add Item</Button>
+        <Button onClick={handleAddItem} disabled={addTestMutation.isLoading}>
+          {addTestMutation.isLoading ? 'Adding...' : 'Add Item'}
+        </Button>
       </div>
       <ul className="space-y-2">
         {tests?.map((test) => (
@@ -50,8 +69,12 @@ const SupabaseDemo = () => {
               onBlur={(e) => handleUpdateItem(test.id, e.target.value)}
               className="flex-grow"
             />
-            <Button onClick={() => handleDeleteItem(test.id)} variant="destructive">
-              Delete
+            <Button 
+              onClick={() => handleDeleteItem(test.id)} 
+              variant="destructive"
+              disabled={deleteTestMutation.isLoading}
+            >
+              {deleteTestMutation.isLoading ? 'Deleting...' : 'Delete'}
             </Button>
           </li>
         ))}
