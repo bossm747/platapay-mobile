@@ -23,7 +23,7 @@ const fromSupabase = async (query) => {
 
 | name       | type                     | format | required |
 |------------|--------------------------|--------|----------|
-| id         | bigint                   | number | true     |
+| id         | int8                     | number | true     |
 | created_at | timestamp with time zone | string | true     |
 
 */
