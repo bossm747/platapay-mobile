@@ -1,27 +1,19 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { SupabaseProvider } from './integrations/supabase/index.js';
-import App from './App.jsx';
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import { SupabaseProvider } from './integrations/supabase/index.js'
+import { SupabaseAuthProvider } from './integrations/supabase/auth.jsx'
+import App from './App.jsx'
+import './index.css'
 
-const canvas = document.createElement('canvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-document.body.appendChild(canvas);
-
-const ctx = canvas.getContext('2d');
-
-const root = createRoot(canvas);
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <SupabaseProvider>
-      <App ctx={ctx} />
-    </SupabaseProvider>
-  </React.StrictMode>
-);
-
-// Resize canvas on window resize
-window.addEventListener('resize', () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
+    <BrowserRouter>
+      <SupabaseProvider>
+        <SupabaseAuthProvider>
+          <App />
+        </SupabaseAuthProvider>
+      </SupabaseProvider>
+    </BrowserRouter>
+  </React.StrictMode>,
+)
