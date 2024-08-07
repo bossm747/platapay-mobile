@@ -16,6 +16,7 @@ import KycIdScanner from './pages/KycIdScanner';
 import IdUpload from './pages/IdUpload';
 import IdVerification from './pages/IdVerification';
 import Balance from './pages/Balance';
+import SupabaseDemo from './pages/SupabaseDemo';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/id-upload" element={<IdUpload />} />
           <Route path="/id-verification" element={<IdVerification />} />
           <Route path="/balance" element={<Balance />} />
+          <Route path="/supabase-demo" element={<SupabaseDemo />} />
         </Routes>
       </Layout>
     </Router>

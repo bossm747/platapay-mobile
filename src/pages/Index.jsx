@@ -72,6 +72,11 @@ const Index = () => {
             ID Verification
           </Button>
         </Link>
+        <Link to="/supabase-demo">
+          <Button className="w-full shadow-lg shadow-[rgba(0,0,0,0.5)] text-white bg-blue-700 hover:bg-blue-600 active:shadow-none active:translate-y-1">
+            Supabase Demo
+          </Button>
+        </Link>
       </div>
     </div>
   );
